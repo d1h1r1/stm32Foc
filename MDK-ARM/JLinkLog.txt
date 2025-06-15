@@ -1,0 +1,136 @@
+T716C 146:601.056   SEGGER J-Link V7.96l Log File
+T716C 146:601.120   DLL Compiled: Jun 12 2024 18:52:06
+T716C 146:601.136   Logging started @ 2025-06-14 13:56
+T716C 146:601.136   Process: D:\keil\keil5\UV4\UV4.exe
+T716C 146:601.136 - 23.568ms
+T716C 146:601.152 JLINK_SetWarnOutHandler(...)
+T716C 146:601.168 - 0.004ms
+T716C 146:601.168 JLINK_OpenEx(...)
+T716C 146:604.032   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T716C 146:604.896   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T716C 146:605.088   Decompressing FW timestamp took 172 us
+T716C 146:611.296   Hardware: V9.60
+T716C 146:611.328   S/N: 59610114
+T716C 146:611.328   OEM: SEGGER
+T716C 146:611.328   Feature(s): RDI, GDB, FlashDL, FlashBP, JFlash
+T716C 146:612.128   Bootloader: (Could not read)
+T716C 146:612.912   TELNET listener socket opened on port 19021
+T716C 146:617.408   WEBSRV WEBSRV_Init(): Starting webserver thread(s)
+T716C 146:617.632   WEBSRV Webserver running on local port 19080
+T716C 146:617.744   Looking for J-Link GUI Server exe at: D:\keil\keil5\ARM\Segger\JLinkGUIServer.exe
+T716C 146:617.776   Looking for J-Link GUI Server exe at: D:\jlink\JLink\JLinkGUIServer.exe
+T716C 146:617.792   Forking J-Link GUI Server: D:\jlink\JLink\JLinkGUIServer.exe
+T716C 146:620.960   J-Link GUI Server info: "J-Link GUI server V7.96l "
+T716C 146:621.520 - 20.355ms returns "O.K."
+T716C 146:621.536 JLINK_GetEmuCaps()
+T716C 146:621.536 - 0.004ms returns 0xB9FF7BBF
+T716C 146:621.552 JLINK_TIF_GetAvailable(...)
+T716C 146:621.760 - 0.202ms
+T716C 146:621.824 JLINK_SetErrorOutHandler(...)
+T716C 146:621.824 - 0.004ms
+T716C 146:621.840 JLINK_ExecCommand("ProjectFile = "D:\project\foc\MCU_Develop\simplefoc11_stm32f103_pos_close_with_current\MDK-ARM\JLinkSettings.ini"", ...). 
+T716C 146:624.752 - 2.917ms returns 0x00
+T716C 146:625.136 JLINK_ExecCommand("Device = STM32F103CB", ...). 
+T716C 146:625.456   Device "STM32F103CB" selected.
+T716C 146:625.712 - 0.550ms returns 0x00
+T716C 146:625.728 JLINK_ExecCommand("DisableConnectionTimeout", ...). 
+T716C 146:625.744   ERROR: Unknown command
+T716C 146:625.744 - 0.008ms returns 0x01
+T716C 146:625.760 JLINK_GetHardwareVersion()
+T716C 146:625.760 - 0.004ms returns 96000
+T716C 146:625.760 JLINK_GetDLLVersion()
+T716C 146:625.760 - 0.004ms returns 79612
+T716C 146:625.760 JLINK_GetOEMString(...)
+T716C 146:625.776 JLINK_GetFirmwareString(...)
+T716C 146:625.776 - 0.004ms
+T716C 146:625.792 JLINK_GetDLLVersion()
+T716C 146:625.792 - 0.004ms returns 79612
+T716C 146:625.808 JLINK_GetCompileDateTime()
+T716C 146:625.808 - 0.004ms
+T716C 146:625.824 JLINK_GetFirmwareString(...)
+T716C 146:625.824 - 0.004ms
+T716C 146:625.824 JLINK_GetHardwareVersion()
+T716C 146:625.824 - 0.004ms returns 96000
+T716C 146:625.824 JLINK_GetSN()
+T716C 146:625.824 - 0.004ms returns 59610114
+T716C 146:625.840 JLINK_GetOEMString(...)
+T716C 146:625.840 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+T716C 146:626.576 - 0.726ms returns 0x00
+T716C 146:626.592 JLINK_HasError()
+T716C 146:626.592 JLINK_SetSpeed(500)
+T716C 146:626.720 - 0.119ms
+T716C 146:632.352 JLINK_HasError()
+T716C 146:632.384 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)
+T716C 146:632.400 - 0.006ms returns JLINKARM_RESET_TYPE_NORMAL
+T716C 146:632.400 JLINK_Reset()
+T716C 146:632.656   InitTarget() start
+T716C 146:632.672    J-Link Script File: Executing InitTarget()
+T716C 146:632.864   SWD selected. Executing JTAG -> SWD switching sequence.
+T716C 147:136.128   DAP initialized successfully.
+T716C 147:136.880   Can not attach to CPU. Trying connect under reset.
+T716C 147:187.984   SWD selected. Executing JTAG -> SWD switching sequence.
+T716C 147:691.584   DAP initialized successfully.
+T716C 147:692.256   Connecting to CPU via connect under reset failed.
+T716C 147:742.544   InitTarget() end - Took 1.10s
+T716C 147:815.808   InitTarget() start
+T716C 147:815.840    J-Link Script File: Executing InitTarget()
+T716C 147:816.144   SWD selected. Executing JTAG -> SWD switching sequence.
+T716C 148:318.048   DAP initialized successfully.
+T716C 148:318.672   Can not attach to CPU. Trying connect under reset.
+T716C 148:369.296   SWD selected. Executing JTAG -> SWD switching sequence.
+T716C 148:871.296   DAP initialized successfully.
+T716C 148:871.904   Connecting to CPU via connect under reset failed.
+T716C 148:922.608   InitTarget() end - Took 1.10s
+T716C 148:922.640 - 2290.236ms
+T716C 148:922.656 JLINK_GetId()
+T716C 148:922.848   InitTarget() start
+T716C 148:922.848    J-Link Script File: Executing InitTarget()
+T716C 148:923.040   SWD selected. Executing JTAG -> SWD switching sequence.
+T716C 149:424.608   DAP initialized successfully.
+T716C 149:425.200   Can not attach to CPU. Trying connect under reset.
+T716C 149:475.856   SWD selected. Executing JTAG -> SWD switching sequence.
+T716C 149:978.128   DAP initialized successfully.
+T716C 149:978.992   Connecting to CPU via connect under reset failed.
+T716C 150:029.184   InitTarget() end - Took 1.10s
+T716C 150:101.632   InitTarget() start
+T716C 150:101.664    J-Link Script File: Executing InitTarget()
+T716C 150:101.856   SWD selected. Executing JTAG -> SWD switching sequence.
+T716C 150:603.504   DAP initialized successfully.
+T716C 150:604.272   Can not attach to CPU. Trying connect under reset.
+T716C 150:654.848   SWD selected. Executing JTAG -> SWD switching sequence.
+T716C 151:156.928   DAP initialized successfully.
+T716C 151:157.568   Connecting to CPU via connect under reset failed.
+T716C 151:207.952   InitTarget() end - Took 1.10s
+T716C 151:207.968 - 2285.325ms returns 0x00000000
+T716C 151:207.984 JLINK_GetId()
+T716C 151:208.192   InitTarget() start
+T716C 151:208.208    J-Link Script File: Executing InitTarget()
+T716C 151:208.368   SWD selected. Executing JTAG -> SWD switching sequence.
+T716C 151:709.440   DAP initialized successfully.
+T716C 151:710.096   Can not attach to CPU. Trying connect under reset.
+T716C 151:760.672   SWD selected. Executing JTAG -> SWD switching sequence.
+T716C 152:261.952   DAP initialized successfully.
+T716C 152:262.656   Connecting to CPU via connect under reset failed.
+T716C 152:312.976   InitTarget() end - Took 1.10s
+T716C 152:385.936   InitTarget() start
+T716C 152:385.968    J-Link Script File: Executing InitTarget()
+T716C 152:386.304   SWD selected. Executing JTAG -> SWD switching sequence.
+T716C 152:888.048   DAP initialized successfully.
+T716C 152:888.640   Can not attach to CPU. Trying connect under reset.
+T716C 152:939.680   SWD selected. Executing JTAG -> SWD switching sequence.
+T716C 153:441.760   DAP initialized successfully.
+T716C 153:442.400   Connecting to CPU via connect under reset failed.
+T716C 153:492.912   InitTarget() end - Took 1.10s
+T716C 153:492.944 - 2284.961ms returns 0x00000000
+T716C 153:495.344 JLINK_GetFirmwareString(...)
+T716C 153:495.376 - 0.022ms
+TCD68 156:314.032 Looking for J-Link GUI Server exe at: D:\keil\keil5\ARM\Segger\JLinkGUIServer.exe
+TCD68 156:314.064 Looking for J-Link GUI Server exe at: D:\jlink\JLink\JLinkGUIServer.exe
+TCD68 156:314.080 Forking J-Link GUI Server: D:\jlink\JLink\JLinkGUIServer.exe
+TCD68 156:316.176 J-Link GUI Server info: "J-Link GUI server V7.96l "
+TD8D4 331:015.744   
+  ***** Error: Connection to emulator lost!
+T716C 59798:716.416 JLINK_Close()
+T716C 59798:736.896 - 14.529ms
+T716C 59798:736.896   
+T716C 59798:736.896   Closed
