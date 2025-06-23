@@ -4,23 +4,9 @@
 #include "BLDCMotor.h"
 #include "InlineCurrentSense.h"
 
-// J-LINK Scope消息结构
-typedef struct {
-    uint32_t timestamp;
-    float a;
-    float b;
-    float c;
-}J_LINK_Scope_Message;
-
 // 外部变量
 extern struct AS5600_I2CConfig_s AS5600_I2C_Config;
 extern I2C_HandleTypeDef hi2c1;
-
-// 全局变量
-float g_Velocity; // 便于使用J-LINK Scope观察曲线
-volatile uint8_t JS_RTT_BufferUp1[2048] = {0,};
-const uint8_t JS_RTT_Channel = 1;
-J_LINK_Scope_Message JS_Message;
 
 AS5600_I2C AS5600_1(AS5600_I2C_Config); // 创建AS5600_I2C对象
 BLDCDriver3PWM motorDriver(GPIO_PIN_0,GPIO_PIN_1,GPIO_PIN_2); // PA0,PA1,PA2
@@ -36,12 +22,6 @@ float curAngle = 0.0f; // 当前角度
  */
 void main_Cpp(void)
 {
-    SEGGER_RTT_ConfigUpBuffer(JS_RTT_Channel,               // 通道号
-                            // 通道名字（命名有意义的，一定要按照官方文档“RTT channel naming convention”的规范来）
-                            "JScope_t4f4f4f4",              // 数据包含1个32位的时间戳与1个uint32_t变量、1个uint32_t变量
-                            (uint8_t*)&JS_RTT_BufferUp1[0], // 缓存地址
-                            sizeof(JS_RTT_BufferUp1),       // 缓存大小
-                            SEGGER_RTT_MODE_NO_BLOCK_SKIP); // 非阻塞
     AS5600_1.init(&hi2c1); // 初始化AS5600
     motorDriver.voltage_power_supply = DEF_POWER_SUPPLY; // 设置电压
     motorDriver.init();   // 初始化电机驱动
@@ -93,19 +73,17 @@ void main_Cpp(void)
     motor.sensor_direction = Direction::CCW; // 之前校准传感器的时候，知道传感器的方向是CCW（翻开校准传感器的章节就知道）
     motor.initFOC(); // 初始化FOC
 
-    SEGGER_RTT_printf(0,"motor.zero_electric_angle:");
-    SEGGER_Printf_Float(motor.zero_electric_angle); // 打印电机零电角度
-    SEGGER_RTT_printf(0,"Sensor:");
-    SEGGER_Printf_Float(AS5600_1.getMechanicalAngle()); // 打印传感器角度
+    // (motor.zero_electric_angle); // 打印电机零电角度
+    // (AS5600_1.getMechanicalAngle()); // 打印传感器角度
+
     HAL_Delay(1000); // 延时1s
     HAL_TIM_Base_Start_IT(&htim4); // 启动TIM4定时器
+
     while(1) {
         HAL_GPIO_TogglePin(run_led_GPIO_Port,run_led_Pin); // 心跳灯跑起来
         curAngle = motor.shaft_angle; // 获取当前位置
-        SEGGER_RTT_printf(0,"curAngle:");
-        SEGGER_Printf_Float(curAngle); // 打印当前位置
-        SEGGER_RTT_printf(0,"targetAngle:");
-        SEGGER_Printf_Float(targetAngle); // 打印目标位置
+        // SEGGER_Printf_Float(curAngle); // 打印当前位置
+        // SEGGER_Printf_Float(targetAngle); // 打印目标位置
         delayMicroseconds(100000U); // 延时100ms
     }
 }
@@ -125,12 +103,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
         motor.move(targetAngle); // 控制目标角度
         HAL_GPIO_WritePin(measure_GPIO_Port,measure_Pin,GPIO_PIN_RESET); // 拉低电平
         
-        JS_Message.timestamp = _micros(); // 获取时间戳
-        // 将占空比放大10倍，便于观察
-        JS_Message.a = motor.driver->dc_a * 10; // A相占空比
-        JS_Message.b = motor.driver->dc_b * 10; // B相占空比
-        JS_Message.c = motor.driver->dc_c * 10; // C相占空比
-        SEGGER_RTT_Write(JS_RTT_Channel, (uint8_t*)&JS_Message, sizeof(JS_Message)); // 写入J-LINK Scope
+        // // 将占空比放大10倍，便于观察
+        // JS_Message.a = motor.driver->dc_a * 10; // A相占空比
+        // JS_Message.b = motor.driver->dc_b * 10; // B相占空比
+        // JS_Message.c = motor.driver->dc_c * 10; // C相占空比
     }
 }
 
