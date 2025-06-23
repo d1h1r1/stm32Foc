@@ -2,6 +2,10 @@
 // change this file to optimal values for your application
 
 #define DEF_POWER_SUPPLY 12.6f //!< default power supply voltage
+#define DEF_CURRENT_LIMIT 1.6f //电压限制
+#define DEF_VOLTAGE_LIMIT 8.6f //电压限制
+#define DEF_VELOCITY_LIMIT 30 //速度限制
+
 // velocity PI controller params
 #define DEF_PID_VEL_P 0.3f //!< default PID controller P value
 #define DEF_PID_VEL_I 10.0f //!<  default PID controller I value

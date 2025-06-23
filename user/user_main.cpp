@@ -59,15 +59,15 @@ void main_Cpp(void)
     motor.PID_current_d.output_ramp = 0; // 0：不设置斜坡
     motor.LPF_current_d.Tf = 0.01f;
     
-    motor.current_limit = DEF_POWER_SUPPLY; // 电流限制
-    motor.voltage_limit = DEF_POWER_SUPPLY; // 电压限制
-    motor.velocity_limit = DEF_POWER_SUPPLY; // 位置闭环模式时，变成位置环PID的limit
+    motor.current_limit = DEF_CURRENT_LIMIT; // 电流限制
+    motor.voltage_limit = DEF_VOLTAGE_LIMIT; // 电压限制
+    motor.velocity_limit = DEF_VELOCITY_LIMIT; // 位置闭环模式时，变成位置环PID的limit
     motor.torque_controller = TorqueControlType::dc_current; // Iq闭环，Id = 0
     
     motor.init(); // 初始化电机
 
-    motor.PID_current_q.limit = DEF_POWER_SUPPLY - 8.5f;
-    motor.PID_current_d.limit = DEF_POWER_SUPPLY - 8.5f;
+    motor.PID_current_q.limit = DEF_VOLTAGE_LIMIT;
+    motor.PID_current_d.limit = DEF_VOLTAGE_LIMIT;
 
     motor.foc_modulation = FOCModulationType::SpaceVectorPWM; // 正弦波改为马鞍波
     motor.sensor_direction = Direction::CCW; // 之前校准传感器的时候，知道传感器的方向是CCW（翻开校准传感器的章节就知道）
@@ -103,21 +103,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
         motor.move(targetAngle); // 控制目标角度
         HAL_GPIO_WritePin(measure_GPIO_Port,measure_Pin,GPIO_PIN_RESET); // 拉低电平
         
+
         // // 将占空比放大10倍，便于观察
         // JS_Message.a = motor.driver->dc_a * 10; // A相占空比
         // JS_Message.b = motor.driver->dc_b * 10; // B相占空比
         // JS_Message.c = motor.driver->dc_c * 10; // C相占空比
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
