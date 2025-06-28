@@ -21,9 +21,9 @@
 #include "adc.h"
 
 /* USER CODE BEGIN 0 */
-// È«ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Û²ì¡£ï¿½Ôºóµ±±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½structï¿½ï¿½Ö¯ï¿½ï¿½ï¿½ï¿½
-volatile uint32_t gChannel3 = 0; // Aï¿½ï¿½
-volatile uint32_t gChannel4 = 0; // Bï¿½ï¿½
+// È«¾Ö±äÁ¿·½±ã¹Û²ì¡£ÒÔºóµ±±äÁ¿¶àÁË£¬ºóÐø¿ÉÒÔÓÃstruct×éÖ¯ÆðÀ´
+volatile uint32_t gChannel3 = 0; // AÏà
+volatile uint32_t gChannel4 = 0; // BÏà
 /* USER CODE END 0 */
 
 ADC_HandleTypeDef hadc1;
@@ -76,7 +76,7 @@ void MX_ADC1_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN ADC1_Init 2 */
-  HAL_ADCEx_Calibration_Start(&hadc1); // ï¿½ï¿½ï¿½ï¿½ADC1Ð£×¼
+  HAL_ADCEx_Calibration_Start(&hadc1); // Æô¶¯ADC1Ð£×¼
   /* USER CODE END ADC1_Init 2 */
 
 }
@@ -133,56 +133,56 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* adcHandle)
 
 /* USER CODE BEGIN 1 */
 /**
-  * @brief  ï¿½ï¿½È¡ADCï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½CubeMXï¿½ï¿½ï¿½ï¿½ScanÄ£Ê½ï¿½ï¿½
-  * @param  hadc  Ö¸ï¿½ï¿½ADCï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ &hadc1ï¿½ï¿½
-  * @retval HAL_StatusTypeDef ï¿½ï¿½ï¿½ï¿½HAL_OKï¿½ï¿½Ê¾ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½×´Ì¬
+  * @brief  ¶ÁÈ¡ADCµÄÁ½¸öÍ¨µÀ£¨ÒÑÔÚCubeMXÅäÖÃScanÄ£Ê½£©
+  * @param  hadc  Ö¸ÏòADC¾ä±ú£¨Èç &hadc1£©
+  * @retval HAL_StatusTypeDef ·µ»ØHAL_OK±íÊ¾³É¹¦£¬·ñÔòÎª´íÎó×´Ì¬
   */
 HAL_StatusTypeDef ADC_StartReadVoltageFromChannels(void)
 {
     HAL_StatusTypeDef status;
-    // ï¿½ï¿½ï¿½ï¿½ADC
+    // Æô¶¯ADC
     status = HAL_ADC_Start(&hadc1);
     if (status != HAL_OK) {
-        return status;  // ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ï¿½Ö±ï¿½Ó·ï¿½ï¿½ï¿½
+        return status;  // Æô¶¯Ê§°ÜÔòÖ±½Ó·µ»Ø
     }
 
-    // 2. ï¿½È´ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½1Í¨ï¿½ï¿½ï¿½ï¿½Rank1 --> Channel3ï¿½ï¿½
-    status = HAL_ADC_PollForConversion(&hadc1, 10); // ï¿½ï¿½Ê±10msï¿½ï¿½ï¿½É¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    // 2. µÈ´ý²¢¶ÁÈ¡µÚ1Í¨µÀ£¨Rank1 --> Channel3£©
+    status = HAL_ADC_PollForConversion(&hadc1, 10); // ³¬Ê±10ms£¬¿É¸ù¾ÝÐèÇóµ÷Õû
     if (status == HAL_OK) {
-        gChannel3 = HAL_ADC_GetValue(&hadc1); // ï¿½ï¿½È¡ï¿½ï¿½1ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½
+        gChannel3 = HAL_ADC_GetValue(&hadc1); // ¶ÁÈ¡µÚ1¸ö×ª»»½á¹û
     } else {
-        // ï¿½ï¿½È¡Ê§ï¿½Ü£ï¿½ï¿½Çµï¿½Í£Ö¹ADC
+        // ¶ÁÈ¡Ê§°Ü£¬¼ÇµÃÍ£Ö¹ADC
         HAL_ADC_Stop(&hadc1);
         return status;
     }
-    // ï¿½ï¿½ï¿½ï¿½ADC
+    // Æô¶¯ADC
     status = HAL_ADC_Start(&hadc1);
     if (status != HAL_OK) {
-        return status;  // ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ï¿½Ö±ï¿½Ó·ï¿½ï¿½ï¿½
+        return status;  // Æô¶¯Ê§°ÜÔòÖ±½Ó·µ»Ø
     }
-    // 3. ï¿½È´ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½2Í¨ï¿½ï¿½ï¿½ï¿½Rank2 --> Channel4ï¿½ï¿½
+    // 3. µÈ´ý²¢¶ÁÈ¡µÚ2Í¨µÀ£¨Rank2 --> Channel4£©
     status = HAL_ADC_PollForConversion(&hadc1, 10);
     if (status == HAL_OK) {
-        gChannel4 = HAL_ADC_GetValue(&hadc1); // ï¿½ï¿½È¡ï¿½ï¿½2ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½
+        gChannel4 = HAL_ADC_GetValue(&hadc1); // ¶ÁÈ¡µÚ2¸ö×ª»»½á¹û
     } else {
         HAL_ADC_Stop(&hadc1);
         return status;
     }
-    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½
+    // ÕâÀï¿ÉÒÔÌîÐ´µÚÈý¸öÍ¨µÀ£¬Èç¹û°å×ÓÓÐÈý¸ö²ÉÑùµç×èµÄ»°
     // Í£Ö¹ADC
     status = HAL_ADC_Stop(&hadc1);
-    return status;  // Ò»ï¿½ï¿½Éºï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Ç·ï¿½Stopï¿½É¹ï¿½ï¿½ï¿½Ò²ï¿½É¼ï¿½é·µï¿½ï¿½Öµ
+    return status;  // Ò»°ã¿ÉºöÂÔ£¬µ«ÈçÐèÅÐ¶ÏÊÇ·ñStop³É¹¦£¬Ò²¿É¼ì²é·µ»ØÖµ
 }
 
 /**
- * @brief ï¿½ï¿½È¡ADCï¿½ï¿½Öµ
+ * @brief ¶ÁÈ¡ADCµÄÖµ
  * 
- * @param CH Í¨ï¿½ï¿½ï¿½ï¿½
- * @return uint32_t ï¿½ï¿½ï¿½ï¿½ADCÖµ
+ * @param CH Í¨µÀºÅ
+ * @return uint32_t ·µ»ØADCÖµ
  */
 static uint32_t adcRead(uint32_t CH) 
 {
-    // ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½Å·ï¿½ï¿½Ø¶ï¿½Ó¦ï¿½ï¿½ADCÖµï¿½ï¿½ï¿½ï¿½Ê±Ö»ï¿½Ãµï¿½Í¨ï¿½ï¿½3ï¿½ï¿½Í¨ï¿½ï¿½4ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    // ¸ù¾ÝÍ¨µÀºÅ·µ»Ø¶ÔÓ¦µÄADCÖµ£¬ÔÝÊ±Ö»ÓÃµ½Í¨µÀ3ÓëÍ¨µÀ4£¬ºóÐø°´ÐèÔö¼Ó
     switch (CH)
     {
     case ADC_CHANNEL_3:
@@ -200,8 +200,8 @@ static uint32_t adcRead(uint32_t CH)
 /**
  * @brief function reading an ADC value and returning the read voltage
  * 
- * @param CH Í¨ï¿½ï¿½ï¿½ï¿½
- * @return float ï¿½ï¿½ï¿½Øµï¿½Ñ¹Öµ
+ * @param CH Í¨µÀºÅ
+ * @return float ·µ»ØµçÑ¹Öµ
  */
 float _readADCVoltageInline(uint32_t CH)
 {

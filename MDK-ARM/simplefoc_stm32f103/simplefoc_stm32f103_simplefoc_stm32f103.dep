@@ -1,6 +1,6 @@
 Dependencies for Project 'simplefoc_stm32f103', Target 'simplefoc_stm32f103': (DO NOT MODIFY !)
 F (startup_stm32f103xb.s)(0x68570310)(--cpu Cortex-M3 -g-I.\RTE\_simplefoc_stm32f103-ID:\keil\keil5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-ID:\keil\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include--pd "__UVISION_VERSION SETA 527"--pd "_RTE_ SETA 1"--pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst--xref -o simplefoc_stm32f103\startup_stm32f103xb.o--depend simplefoc_stm32f103\startup_stm32f103xb.d)
-F (../Core/Src/main.c)(0x6858C34F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER_RTT -I ../simplefoc/common -I ../simplefoc/common/base_classes -I ../components/DWT -I ../user -I ../simplefoc/sensors -I ../simplefoc/drivers -I ../simplefoc -I ../components/bsp_pwm -I ../simplefoc/current_sense-I./RTE/_simplefoc_stm32f103-ID:/keil/keil5/ARM/PACK/ARM/CMSIS/4.3.0/CMSIS/Include-ID:/keil/keil5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o simplefoc_stm32f103/main.o -MD)
+F (../Core/Src/main.c)(0x685FF692)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER_RTT -I ../simplefoc/common -I ../simplefoc/common/base_classes -I ../components/DWT -I ../user -I ../simplefoc/sensors -I ../simplefoc/drivers -I ../simplefoc -I ../components/bsp_pwm -I ../simplefoc/current_sense-I./RTE/_simplefoc_stm32f103-ID:/keil/keil5/ARM/PACK/ARM/CMSIS/4.3.0/CMSIS/Include-ID:/keil/keil5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o simplefoc_stm32f103/main.o -MD)
 I (..\Core\Inc\main.h)(0x681714C8)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x6817140B)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x681714C8)
@@ -47,6 +47,7 @@ I (..\Core\Inc\i2c.h)(0x681616F4)
 I (..\Core\Inc\tim.h)(0x681616F4)
 I (..\Core\Inc\usart.h)(0x681714C7)
 I (..\Core\Inc\gpio.h)(0x681616F4)
+I (..\Core\Inc\stmflash.h)(0x685FF5D3)
 I (..\user\user_main.h)(0x681616F5)
 I (..\simplefoc\common\time_utils.h)(0x681616F5)
 I (..\simplefoc\common\foc_utils.h)(0x681616F5)
@@ -93,7 +94,7 @@ I (..\components\DWT\dwt_timer.h)(0x681616F5)
 I (D:\keil\keil5\ARM\ARMCLANG\include\math.h)(0x5B739900)
 I (D:\keil\keil5\ARM\ARMCLANG\include\stdio.h)(0x5B739900)
 I (D:\keil\keil5\ARM\ARMCLANG\include\string.h)(0x5B739900)
-F (../Core/Src/adc.c)(0x6856FCB4)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER_RTT -I ../simplefoc/common -I ../simplefoc/common/base_classes -I ../components/DWT -I ../user -I ../simplefoc/sensors -I ../simplefoc/drivers -I ../simplefoc -I ../components/bsp_pwm -I ../simplefoc/current_sense-I./RTE/_simplefoc_stm32f103-ID:/keil/keil5/ARM/PACK/ARM/CMSIS/4.3.0/CMSIS/Include-ID:/keil/keil5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o simplefoc_stm32f103/adc.o -MD)
+F (../Core/Src/adc.c)(0x685FEE67)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER_RTT -I ../simplefoc/common -I ../simplefoc/common/base_classes -I ../components/DWT -I ../user -I ../simplefoc/sensors -I ../simplefoc/drivers -I ../simplefoc -I ../components/bsp_pwm -I ../simplefoc/current_sense-I./RTE/_simplefoc_stm32f103-ID:/keil/keil5/ARM/PACK/ARM/CMSIS/4.3.0/CMSIS/Include-ID:/keil/keil5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o simplefoc_stm32f103/adc.o -MD)
 I (..\Core\Inc\adc.h)(0x681616F4)
 I (..\Core\Inc\main.h)(0x681714C8)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x6817140B)
@@ -179,7 +180,7 @@ I (..\components\DWT\dwt_timer.h)(0x681616F5)
 I (D:\keil\keil5\ARM\ARMCLANG\include\math.h)(0x5B739900)
 I (D:\keil\keil5\ARM\ARMCLANG\include\stdio.h)(0x5B739900)
 I (D:\keil\keil5\ARM\ARMCLANG\include\string.h)(0x5B739900)
-F (../Core/Src/tim.c)(0x681616F4)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER_RTT -I ../simplefoc/common -I ../simplefoc/common/base_classes -I ../components/DWT -I ../user -I ../simplefoc/sensors -I ../simplefoc/drivers -I ../simplefoc -I ../components/bsp_pwm -I ../simplefoc/current_sense-I./RTE/_simplefoc_stm32f103-ID:/keil/keil5/ARM/PACK/ARM/CMSIS/4.3.0/CMSIS/Include-ID:/keil/keil5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o simplefoc_stm32f103/tim.o -MD)
+F (../Core/Src/tim.c)(0x685FB417)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER_RTT -I ../simplefoc/common -I ../simplefoc/common/base_classes -I ../components/DWT -I ../user -I ../simplefoc/sensors -I ../simplefoc/drivers -I ../simplefoc -I ../components/bsp_pwm -I ../simplefoc/current_sense-I./RTE/_simplefoc_stm32f103-ID:/keil/keil5/ARM/PACK/ARM/CMSIS/4.3.0/CMSIS/Include-ID:/keil/keil5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o simplefoc_stm32f103/tim.o -MD)
 I (..\Core\Inc\tim.h)(0x681616F4)
 I (..\Core\Inc\main.h)(0x681714C8)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x6817140B)
@@ -309,6 +310,49 @@ I (D:\keil\keil5\ARM\ARMCLANG\include\stdio.h)(0x5B739900)
 I (D:\keil\keil5\ARM\ARMCLANG\include\string.h)(0x5B739900)
 I (..\Core\Inc\stm32f1xx_it.h)(0x681714C7)
 F (../Core/Src/stm32f1xx_hal_msp.c)(0x681616F4)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER_RTT -I ../simplefoc/common -I ../simplefoc/common/base_classes -I ../components/DWT -I ../user -I ../simplefoc/sensors -I ../simplefoc/drivers -I ../simplefoc -I ../components/bsp_pwm -I ../simplefoc/current_sense-I./RTE/_simplefoc_stm32f103-ID:/keil/keil5/ARM/PACK/ARM/CMSIS/4.3.0/CMSIS/Include-ID:/keil/keil5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o simplefoc_stm32f103/stm32f1xx_hal_msp.o -MD)
+I (..\Core\Inc\main.h)(0x681714C8)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x6817140B)
+I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x681714C8)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x6817140B)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x6817140B)
+I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x6817140B)
+I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f103xb.h)(0x6817140B)
+I (..\Drivers\CMSIS\Include\core_cm3.h)(0x681713FB)
+I (D:\keil\keil5\ARM\ARMCLANG\include\stdint.h)(0x5B739900)
+I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x681713FB)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x681713FB)
+I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x681713FB)
+I (D:\keil\keil5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8EB578)
+I (D:\keil\keil5\ARM\ARMCLANG\include\arm_acle.h)(0x5910B974)
+I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\system_stm32f1xx.h)(0x6817140B)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x6817140B)
+I (D:\keil\keil5\ARM\ARMCLANG\include\stddef.h)(0x5B739900)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h)(0x6817140B)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h)(0x6817140B)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h)(0x6817140B)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_exti.h)(0x6817140B)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma.h)(0x6817140B)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma_ex.h)(0x6817140B)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_cortex.h)(0x6817140B)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_adc.h)(0x6817140B)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_adc_ex.h)(0x6817140B)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash.h)(0x6817140B)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h)(0x6817140B)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x6817140B)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x6817140B)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim.h)(0x6817140B)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h)(0x6817140B)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h)(0x6817140B)
+I (..\SEGGER_RTT\SEGGER_RTT.h)(0x681616F5)
+I (..\SEGGER_RTT\SEGGER_RTT_Conf.h)(0x681616F5)
+I (D:\keil\keil5\ARM\ARMCLANG\include\stdlib.h)(0x5B739900)
+I (D:\keil\keil5\ARM\ARMCLANG\include\stdarg.h)(0x5B739900)
+I (..\components\DWT\dwt_timer.h)(0x681616F5)
+I (D:\keil\keil5\ARM\ARMCLANG\include\math.h)(0x5B739900)
+I (D:\keil\keil5\ARM\ARMCLANG\include\stdio.h)(0x5B739900)
+I (D:\keil\keil5\ARM\ARMCLANG\include\string.h)(0x5B739900)
+F (..\Core\Src\stmflash.c)(0x685FF5C9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER_RTT -I ../simplefoc/common -I ../simplefoc/common/base_classes -I ../components/DWT -I ../user -I ../simplefoc/sensors -I ../simplefoc/drivers -I ../simplefoc -I ../components/bsp_pwm -I ../simplefoc/current_sense-I./RTE/_simplefoc_stm32f103-ID:/keil/keil5/ARM/PACK/ARM/CMSIS/4.3.0/CMSIS/Include-ID:/keil/keil5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o simplefoc_stm32f103/stmflash.o -MD)
+I (..\Core\Inc\stmflash.h)(0x685FF5D3)
 I (..\Core\Inc\main.h)(0x681714C8)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x6817140B)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x681714C8)
@@ -959,7 +1003,7 @@ I (D:\keil\keil5\ARM\ARMCLANG\include\stdlib.h)(0x5B739900)
 I (D:\keil\keil5\ARM\ARMCLANG\include\stdarg.h)(0x5B739900)
 I (D:\keil\keil5\ARM\ARMCLANG\include\stdint.h)(0x5B739900)
 I (D:\keil\keil5\ARM\ARMCLANG\include\string.h)(0x5B739900)
-F (..\simplefoc\common\defaults.h)(0x681616F5)()
+F (..\simplefoc\common\defaults.h)(0x685F854E)()
 F (..\simplefoc\common\foc_utils.cpp)(0x681616F5)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER_RTT -I ../simplefoc/common -I ../simplefoc/common/base_classes -I ../components/DWT -I ../user -I ../simplefoc/sensors -I ../simplefoc/drivers -I ../simplefoc -I ../components/bsp_pwm -I ../simplefoc/current_sense-I./RTE/_simplefoc_stm32f103-ID:/keil/keil5/ARM/PACK/ARM/CMSIS/4.3.0/CMSIS/Include-ID:/keil/keil5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o simplefoc_stm32f103/foc_utils.o -MD)
 I (..\simplefoc\common\foc_utils.h)(0x681616F5)
 I (..\Core\Inc\main.h)(0x681714C8)
@@ -1243,7 +1287,7 @@ I (D:\keil\keil5\ARM\ARMCLANG\include\stdio.h)(0x5B739900)
 I (D:\keil\keil5\ARM\ARMCLANG\include\libcxx\string.h)(0x56BD1ACE)
 I (D:\keil\keil5\ARM\ARMCLANG\include\string.h)(0x5B739900)
 I (..\simplefoc\common\base_classes\..\foc_utils.h)(0x681616F5)
-F (..\simplefoc\common\base_classes\FOCMotor.cpp)(0x681616F5)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER_RTT -I ../simplefoc/common -I ../simplefoc/common/base_classes -I ../components/DWT -I ../user -I ../simplefoc/sensors -I ../simplefoc/drivers -I ../simplefoc -I ../components/bsp_pwm -I ../simplefoc/current_sense-I./RTE/_simplefoc_stm32f103-ID:/keil/keil5/ARM/PACK/ARM/CMSIS/4.3.0/CMSIS/Include-ID:/keil/keil5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o simplefoc_stm32f103/focmotor.o -MD)
+F (..\simplefoc\common\base_classes\FOCMotor.cpp)(0x685F75E0)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER_RTT -I ../simplefoc/common -I ../simplefoc/common/base_classes -I ../components/DWT -I ../user -I ../simplefoc/sensors -I ../simplefoc/drivers -I ../simplefoc -I ../components/bsp_pwm -I ../simplefoc/current_sense-I./RTE/_simplefoc_stm32f103-ID:/keil/keil5/ARM/PACK/ARM/CMSIS/4.3.0/CMSIS/Include-ID:/keil/keil5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o simplefoc_stm32f103/focmotor.o -MD)
 I (..\simplefoc\common\base_classes\FOCMotor.h)(0x681616F5)
 I (..\Core\Inc\main.h)(0x681714C8)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x6817140B)
@@ -1306,7 +1350,7 @@ I (..\simplefoc\common\base_classes\BLDCDriver.h)(0x681616F5)
 I (..\simplefoc\common\base_classes\..\foc_utils.h)(0x681616F5)
 I (..\simplefoc\common\time_utils.h)(0x681616F5)
 I (..\simplefoc\common\foc_utils.h)(0x681616F5)
-I (..\simplefoc\common\defaults.h)(0x681616F5)
+I (..\simplefoc\common\defaults.h)(0x685F854E)
 I (..\simplefoc\common\pid.h)(0x681616F5)
 I (..\simplefoc\common\lowpass_filter.h)(0x681616F5)
 F (..\simplefoc\common\base_classes\Sensor.cpp)(0x6858BE44)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER_RTT -I ../simplefoc/common -I ../simplefoc/common/base_classes -I ../components/DWT -I ../user -I ../simplefoc/sensors -I ../simplefoc/drivers -I ../simplefoc -I ../components/bsp_pwm -I ../simplefoc/current_sense-I./RTE/_simplefoc_stm32f103-ID:/keil/keil5/ARM/PACK/ARM/CMSIS/4.3.0/CMSIS/Include-ID:/keil/keil5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o simplefoc_stm32f103/sensor.o -MD)
@@ -1488,7 +1532,7 @@ I (..\Core\Inc\tim.h)(0x681616F4)
 I (..\simplefoc\common\base_classes\BLDCDriver.h)(0x681616F5)
 I (..\simplefoc\common\foc_utils.h)(0x681616F5)
 I (..\simplefoc\common\time_utils.h)(0x681616F5)
-I (..\simplefoc\common\defaults.h)(0x681616F5)
+I (..\simplefoc\common\defaults.h)(0x685F854E)
 I (..\components\bsp_pwm\bsp_pwm.h)(0x681616F5)
 F (..\simplefoc\current_sense\InlineCurrentSense.cpp)(0x681616F5)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER_RTT -I ../simplefoc/common -I ../simplefoc/common/base_classes -I ../components/DWT -I ../user -I ../simplefoc/sensors -I ../simplefoc/drivers -I ../simplefoc -I ../components/bsp_pwm -I ../simplefoc/current_sense-I./RTE/_simplefoc_stm32f103-ID:/keil/keil5/ARM/PACK/ARM/CMSIS/4.3.0/CMSIS/Include-ID:/keil/keil5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o simplefoc_stm32f103/inlinecurrentsense.o -MD)
 I (..\simplefoc\current_sense\InlineCurrentSense.h)(0x681616F5)
@@ -1548,7 +1592,7 @@ I (D:\keil\keil5\ARM\ARMCLANG\include\string.h)(0x5B739900)
 I (..\Core\Inc\adc.h)(0x681616F4)
 I (..\simplefoc\common\foc_utils.h)(0x681616F5)
 I (..\simplefoc\common\time_utils.h)(0x681616F5)
-I (..\simplefoc\common\defaults.h)(0x681616F5)
+I (..\simplefoc\common\defaults.h)(0x685F854E)
 I (..\simplefoc\common\base_classes\CurrentSense.h)(0x681616F5)
 I (..\simplefoc\common\base_classes\BLDCDriver.h)(0x681616F5)
 I (..\simplefoc\common\base_classes\..\foc_utils.h)(0x681616F5)
@@ -1617,10 +1661,10 @@ I (..\simplefoc\common\base_classes\BLDCDriver.h)(0x681616F5)
 I (..\simplefoc\common\base_classes\..\foc_utils.h)(0x681616F5)
 I (..\simplefoc\common\time_utils.h)(0x681616F5)
 I (..\simplefoc\common\foc_utils.h)(0x681616F5)
-I (..\simplefoc\common\defaults.h)(0x681616F5)
+I (..\simplefoc\common\defaults.h)(0x685F854E)
 I (..\simplefoc\common\pid.h)(0x681616F5)
 I (..\simplefoc\common\lowpass_filter.h)(0x681616F5)
-F (..\user\user_main.cpp)(0x6858C697)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER_RTT -I ../simplefoc/common -I ../simplefoc/common/base_classes -I ../components/DWT -I ../user -I ../simplefoc/sensors -I ../simplefoc/drivers -I ../simplefoc -I ../components/bsp_pwm -I ../simplefoc/current_sense-I./RTE/_simplefoc_stm32f103-ID:/keil/keil5/ARM/PACK/ARM/CMSIS/4.3.0/CMSIS/Include-ID:/keil/keil5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o simplefoc_stm32f103/user_main.o -MD)
+F (..\user\user_main.cpp)(0x685FF535)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER_RTT -I ../simplefoc/common -I ../simplefoc/common/base_classes -I ../components/DWT -I ../user -I ../simplefoc/sensors -I ../simplefoc/drivers -I ../simplefoc -I ../components/bsp_pwm -I ../simplefoc/current_sense-I./RTE/_simplefoc_stm32f103-ID:/keil/keil5/ARM/PACK/ARM/CMSIS/4.3.0/CMSIS/Include-ID:/keil/keil5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o simplefoc_stm32f103/user_main.o -MD)
 I (..\user\user_main.h)(0x681616F5)
 I (..\Core\Inc\main.h)(0x681714C8)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x6817140B)
@@ -1684,7 +1728,7 @@ I (D:\keil\keil5\ARM\ARMCLANG\include\inttypes.h)(0x5B739900)
 I (..\simplefoc\drivers\BLDCDriver3PWM.h)(0x681616F5)
 I (..\Core\Inc\tim.h)(0x681616F4)
 I (..\simplefoc\common\base_classes\BLDCDriver.h)(0x681616F5)
-I (..\simplefoc\common\defaults.h)(0x681616F5)
+I (..\simplefoc\common\defaults.h)(0x685F854E)
 I (..\components\bsp_pwm\bsp_pwm.h)(0x681616F5)
 I (..\simplefoc\BLDCMotor.h)(0x681616F5)
 I (..\simplefoc\common\base_classes\FOCMotor.h)(0x681616F5)
@@ -1736,7 +1780,7 @@ I (D:\keil\keil5\ARM\ARMCLANG\include\stdarg.h)(0x5B739900)
 I (D:\keil\keil5\ARM\ARMCLANG\include\math.h)(0x5B739900)
 I (D:\keil\keil5\ARM\ARMCLANG\include\stdio.h)(0x5B739900)
 I (D:\keil\keil5\ARM\ARMCLANG\include\string.h)(0x5B739900)
-F (..\components\bsp_pwm\bsp_pwm.c)(0x681616F5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER_RTT -I ../simplefoc/common -I ../simplefoc/common/base_classes -I ../components/DWT -I ../user -I ../simplefoc/sensors -I ../simplefoc/drivers -I ../simplefoc -I ../components/bsp_pwm -I ../simplefoc/current_sense-I./RTE/_simplefoc_stm32f103-ID:/keil/keil5/ARM/PACK/ARM/CMSIS/4.3.0/CMSIS/Include-ID:/keil/keil5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o simplefoc_stm32f103/bsp_pwm.o -MD)
+F (..\components\bsp_pwm\bsp_pwm.c)(0x685F8B8B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../SEGGER_RTT -I ../simplefoc/common -I ../simplefoc/common/base_classes -I ../components/DWT -I ../user -I ../simplefoc/sensors -I ../simplefoc/drivers -I ../simplefoc -I ../components/bsp_pwm -I ../simplefoc/current_sense-I./RTE/_simplefoc_stm32f103-ID:/keil/keil5/ARM/PACK/ARM/CMSIS/4.3.0/CMSIS/Include-ID:/keil/keil5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o simplefoc_stm32f103/bsp_pwm.o -MD)
 I (..\components\bsp_pwm\bsp_pwm.h)(0x681616F5)
 I (..\Core\Inc\main.h)(0x681714C8)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x6817140B)

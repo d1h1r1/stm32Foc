@@ -8,6 +8,7 @@
 "simplefoc_stm32f103\usart.o"
 "simplefoc_stm32f103\stm32f1xx_it.o"
 "simplefoc_stm32f103\stm32f1xx_hal_msp.o"
+"simplefoc_stm32f103\stmflash.o"
 "simplefoc_stm32f103\stm32f1xx_hal_gpio_ex.o"
 "simplefoc_stm32f103\stm32f1xx_hal_adc.o"
 "simplefoc_stm32f103\stm32f1xx_hal_adc_ex.o"

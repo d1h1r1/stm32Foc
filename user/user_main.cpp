@@ -10,10 +10,10 @@ extern I2C_HandleTypeDef hi2c1;
 
 AS5600_I2C AS5600_1(AS5600_I2C_Config); // 创建AS5600_I2C对象
 BLDCDriver3PWM motorDriver(GPIO_PIN_0,GPIO_PIN_1,GPIO_PIN_2); // PA0,PA1,PA2
-BLDCMotor motor(7); // 创建BLDCMotor对象,电机是7对极
+BLDCMotor motor(11); // 创建BLDCMotor对象,电机是7对极
 InlineCurrentSense currentSense(0.001f,50.0f,ADC_CHANNEL_3,ADC_CHANNEL_4,NOT_SET); // 创建电流传感器对象
 
-float targetAngle = 1.0f; // 目标角度
+float targetAngle = 3.0f; // 目标角度
 float curAngle = 0.0f; // 当前角度
 
 /**
@@ -37,24 +37,24 @@ void main_Cpp(void)
     motor.controller = MotionControlType::angle; // 设置控制器模式(位置闭环模式)
 
     motor.PID_velocity.P = 0.50f; // 设置速度P
-    motor.PID_velocity.I = 10.0f; // 设置速度I
+    motor.PID_velocity.I = 0.0f; // 设置速度I
     motor.PID_velocity.D = 0; // 设置速度D
     motor.PID_velocity.output_ramp = 0; // 0：不设置斜坡
     motor.LPF_velocity.Tf = 0.01f; // 设置速度低通滤波器
 
-    motor.P_angle.P = 50.0f; // 位置环P
-    motor.P_angle.I = 1000.0f; // 位置环I
+    motor.P_angle.P = 10.0f; // 位置环P
+    motor.P_angle.I = 0.0f; // 位置环I
     motor.P_angle.D = 0.0f;  // 位置环D
     motor.P_angle.output_ramp = 0; // 不设置
     
-    motor.PID_current_q.P = 0.3f;
-    motor.PID_current_q.I = 1.0f;
+    motor.PID_current_q.P = 2.0f;
+    motor.PID_current_q.I = 0.0f;
     motor.PID_current_q.D = 0;
     motor.PID_current_q.output_ramp = 0; // 不设置
     motor.LPF_current_q.Tf = 0.01f;      // 低通滤波器
     
-    motor.PID_current_d.P = 0.3f;
-    motor.PID_current_d.I = 1.0f;
+    motor.PID_current_d.P = 2.0;
+    motor.PID_current_d.I = 0.0f;
     motor.PID_current_d.D = 0;
     motor.PID_current_d.output_ramp = 0; // 0：不设置斜坡
     motor.LPF_current_d.Tf = 0.01f;
@@ -96,13 +96,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
     if(htim->Instance == TIM2)
     {
-    } else if(htim->Instance == TIM4) {
-        
-        HAL_GPIO_WritePin(measure_GPIO_Port,measure_Pin,GPIO_PIN_SET); // 拉高电平
+    } else if(htim->Instance == TIM4) {    
         motor.loopFOC(); // 执行FOC
-        motor.move(targetAngle); // 控制目标角度
-        HAL_GPIO_WritePin(measure_GPIO_Port,measure_Pin,GPIO_PIN_RESET); // 拉低电平
-        
+        motor.move(targetAngle); // 控制目标角度     
 
         // // 将占空比放大10倍，便于观察
         // JS_Message.a = motor.driver->dc_a * 10; // A相占空比

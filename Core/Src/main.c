@@ -23,7 +23,7 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
-
+#include "stmflash.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "user_main.h"
@@ -57,6 +57,12 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+
+const u8 TEXT_Buffer_1[]={0x11, 0x22, 0x33};//要写入到STM32 FLASH的字符串数组
+#define SIZE sizeof(TEXT_Buffer_1)	 	//数组长度
+u8 datatemp[SIZE];  //Flash读取缓存数组
+	
 /**
  * @brief RTTͨ��0��ӡ������
  * 
@@ -104,6 +110,8 @@ int main(void)
   MX_ADC1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+//	STMFLASH_Write(FLASH_SAVE_ADDR,(u16*)TEXT_Buffer_1,SIZE);//第一次写读
+	STMFLASH_Read(FLASH_SAVE_ADDR,(u16*)datatemp,SIZE);
   DWT_Timer_Init(); // ��ʼ��DWT��ʱ��
   main_Cpp();       // ��תC++����
   /* USER CODE END 2 */
