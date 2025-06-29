@@ -4,105 +4,106 @@
 #include "BLDCMotor.h"
 #include "InlineCurrentSense.h"
 
-// Íâ²¿±äÁ¿
+// ï¿½â²¿ï¿½ï¿½ï¿½ï¿½
 extern struct AS5600_I2CConfig_s AS5600_I2C_Config;
 extern I2C_HandleTypeDef hi2c1;
+extern I2C_HandleTypeDef hi2c2;
 
-AS5600_I2C AS5600_1(AS5600_I2C_Config); // ´´½¨AS5600_I2C¶ÔÏó
+AS5600_I2C AS5600_1(AS5600_I2C_Config); // ï¿½ï¿½ï¿½ï¿½AS5600_I2Cï¿½ï¿½ï¿½ï¿½
 BLDCDriver3PWM motorDriver(GPIO_PIN_0,GPIO_PIN_1,GPIO_PIN_2); // PA0,PA1,PA2
-BLDCMotor motor(11); // ´´½¨BLDCMotor¶ÔÏó,µç»úÊÇ7¶Ô¼«
-InlineCurrentSense currentSense(0.001f,50.0f,ADC_CHANNEL_3,ADC_CHANNEL_4,NOT_SET); // ´´½¨µçÁ÷´«¸ÐÆ÷¶ÔÏó
+BLDCMotor motor(11); // ï¿½ï¿½ï¿½ï¿½BLDCMotorï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½7ï¿½Ô¼ï¿½
+InlineCurrentSense currentSense(0.001f,50.0f,ADC_CHANNEL_3,ADC_CHANNEL_4,NOT_SET); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-float targetAngle = 3.0f; // Ä¿±ê½Ç¶È
-float curAngle = 0.0f; // µ±Ç°½Ç¶È
+float targetAngle = 3.0f; // Ä¿ï¿½ï¿½Ç¶ï¿½
+float curAngle = 0.0f; // ï¿½ï¿½Ç°ï¿½Ç¶ï¿½
 
 /**
- * @brief C++»·¾³Èë¿Úº¯Êý
+ * @brief C++ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úºï¿½ï¿½ï¿½
  * 
  */
 void main_Cpp(void)
 {
-    AS5600_1.init(&hi2c1); // ³õÊ¼»¯AS5600
-    motorDriver.voltage_power_supply = DEF_POWER_SUPPLY; // ÉèÖÃµçÑ¹
-    motorDriver.init();   // ³õÊ¼»¯µç»úÇý¶¯
+    AS5600_1.init(&hi2c1, &hi2c2); // ï¿½ï¿½Ê¼ï¿½ï¿½AS5600
+    motorDriver.voltage_power_supply = DEF_POWER_SUPPLY; // ï¿½ï¿½ï¿½Ãµï¿½Ñ¹
+    motorDriver.init();   // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-    currentSense.skip_align = true; // Ìø¹ý¼ì²âµç»úÈýÏà½ÓÏß
-    currentSense.init();   // ³õÊ¼»¯µçÁ÷´«¸ÐÆ÷
-    currentSense.linkDriver(&motorDriver); // µçÁ÷´«¸ÐÆ÷Á¬½ÓÇý¶¯Æ÷
+    currentSense.skip_align = true; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    currentSense.init();   // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    currentSense.linkDriver(&motorDriver); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                             
-    motor.linkSensor(&AS5600_1); // Á¬½Ó±àÂëÆ÷
-    motor.linkDriver(&motorDriver); // Á¬½ÓÇý¶¯Æ÷
-    motor.linkCurrentSense(&currentSense); // Á¬½ÓµçÁ÷´«¸ÐÆ÷
-    motor.voltage_sensor_align = 6; // Ð£×¼Æ«ÒÆoffsetÊ±£¬ËùÓÃµ½µÄµçÑ¹Öµ£¨Ïàµ±ÓÚÕ¼¿Õ±È4V / 12V = 1/3£©
-    motor.controller = MotionControlType::angle; // ÉèÖÃ¿ØÖÆÆ÷Ä£Ê½(Î»ÖÃ±Õ»·Ä£Ê½)
+    motor.linkSensor(&AS5600_1); // ï¿½ï¿½ï¿½Ó±ï¿½ï¿½ï¿½ï¿½ï¿½
+    motor.linkDriver(&motorDriver); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    motor.linkCurrentSense(&currentSense); // ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    motor.voltage_sensor_align = 6; // Ð£×¼Æ«ï¿½ï¿½offsetÊ±ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½Äµï¿½Ñ¹Öµï¿½ï¿½ï¿½àµ±ï¿½ï¿½Õ¼ï¿½Õ±ï¿½4V / 12V = 1/3ï¿½ï¿½
+    motor.controller = MotionControlType::angle; // ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½(Î»ï¿½Ã±Õ»ï¿½Ä£Ê½)
 
-    motor.PID_velocity.P = 0.50f; // ÉèÖÃËÙ¶ÈP
-    motor.PID_velocity.I = 0.0f; // ÉèÖÃËÙ¶ÈI
-    motor.PID_velocity.D = 0; // ÉèÖÃËÙ¶ÈD
-    motor.PID_velocity.output_ramp = 0; // 0£º²»ÉèÖÃÐ±ÆÂ
-    motor.LPF_velocity.Tf = 0.01f; // ÉèÖÃËÙ¶ÈµÍÍ¨ÂË²¨Æ÷
+    motor.PID_velocity.P = 0.50f; // ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½P
+    motor.PID_velocity.I = 0.0f; // ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½I
+    motor.PID_velocity.D = 0; // ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½D
+    motor.PID_velocity.output_ramp = 0; // 0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½
+    motor.LPF_velocity.Tf = 0.01f; // ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶Èµï¿½Í¨ï¿½Ë²ï¿½ï¿½ï¿½
 
-    motor.P_angle.P = 10.0f; // Î»ÖÃ»·P
-    motor.P_angle.I = 0.0f; // Î»ÖÃ»·I
-    motor.P_angle.D = 0.0f;  // Î»ÖÃ»·D
-    motor.P_angle.output_ramp = 0; // ²»ÉèÖÃ
+    motor.P_angle.P = 10.0f; // Î»ï¿½Ã»ï¿½P
+    motor.P_angle.I = 0.0f; // Î»ï¿½Ã»ï¿½I
+    motor.P_angle.D = 0.0f;  // Î»ï¿½Ã»ï¿½D
+    motor.P_angle.output_ramp = 0; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     
     motor.PID_current_q.P = 2.0f;
     motor.PID_current_q.I = 0.0f;
     motor.PID_current_q.D = 0;
-    motor.PID_current_q.output_ramp = 0; // ²»ÉèÖÃ
-    motor.LPF_current_q.Tf = 0.01f;      // µÍÍ¨ÂË²¨Æ÷
+    motor.PID_current_q.output_ramp = 0; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    motor.LPF_current_q.Tf = 0.01f;      // ï¿½ï¿½Í¨ï¿½Ë²ï¿½ï¿½ï¿½
     
     motor.PID_current_d.P = 2.0;
     motor.PID_current_d.I = 0.0f;
     motor.PID_current_d.D = 0;
-    motor.PID_current_d.output_ramp = 0; // 0£º²»ÉèÖÃÐ±ÆÂ
+    motor.PID_current_d.output_ramp = 0; // 0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½
     motor.LPF_current_d.Tf = 0.01f;
     
-    motor.current_limit = DEF_CURRENT_LIMIT; // µçÁ÷ÏÞÖÆ
-    motor.voltage_limit = DEF_VOLTAGE_LIMIT; // µçÑ¹ÏÞÖÆ
-    motor.velocity_limit = DEF_VELOCITY_LIMIT; // Î»ÖÃ±Õ»·Ä£Ê½Ê±£¬±ä³ÉÎ»ÖÃ»·PIDµÄlimit
-    motor.torque_controller = TorqueControlType::dc_current; // Iq±Õ»·£¬Id = 0
+    motor.current_limit = DEF_CURRENT_LIMIT; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    motor.voltage_limit = DEF_VOLTAGE_LIMIT; // ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½
+    motor.velocity_limit = DEF_VELOCITY_LIMIT; // Î»ï¿½Ã±Õ»ï¿½Ä£Ê½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã»ï¿½PIDï¿½ï¿½limit
+    motor.torque_controller = TorqueControlType::dc_current; // Iqï¿½Õ»ï¿½ï¿½ï¿½Id = 0
     
-    motor.init(); // ³õÊ¼»¯µç»ú
+    motor.init(); // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½
 
     motor.PID_current_q.limit = DEF_VOLTAGE_LIMIT;
     motor.PID_current_d.limit = DEF_VOLTAGE_LIMIT;
 
-    motor.foc_modulation = FOCModulationType::SpaceVectorPWM; // ÕýÏÒ²¨¸ÄÎªÂí°°²¨
-    motor.sensor_direction = Direction::CCW; // Ö®Ç°Ð£×¼´«¸ÐÆ÷µÄÊ±ºò£¬ÖªµÀ´«¸ÐÆ÷µÄ·½ÏòÊÇCCW£¨·­¿ªÐ£×¼´«¸ÐÆ÷µÄÕÂ½Ú¾ÍÖªµÀ£©
-    motor.initFOC(); // ³õÊ¼»¯FOC
+    motor.foc_modulation = FOCModulationType::SpaceVectorPWM; // ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    motor.sensor_direction = Direction::CCW; // Ö®Ç°Ð£×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½CCWï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â½Ú¾ï¿½Öªï¿½ï¿½ï¿½ï¿½
+    motor.initFOC(); // ï¿½ï¿½Ê¼ï¿½ï¿½FOC
 
-    // (motor.zero_electric_angle); // ´òÓ¡µç»úÁãµç½Ç¶È
-    // (AS5600_1.getMechanicalAngle()); // ´òÓ¡´«¸ÐÆ÷½Ç¶È
+    // (motor.zero_electric_angle); // ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¶ï¿½
+    // (AS5600_1.getMechanicalAngle()); // ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¶ï¿½
 
-    HAL_Delay(1000); // ÑÓÊ±1s
-    HAL_TIM_Base_Start_IT(&htim4); // Æô¶¯TIM4¶¨Ê±Æ÷
+    HAL_Delay(1000); // ï¿½ï¿½Ê±1s
+    HAL_TIM_Base_Start_IT(&htim4); // ï¿½ï¿½ï¿½ï¿½TIM4ï¿½ï¿½Ê±ï¿½ï¿½
 
     while(1) {
-        HAL_GPIO_TogglePin(run_led_GPIO_Port,run_led_Pin); // ÐÄÌøµÆÅÜÆðÀ´
-        curAngle = motor.shaft_angle; // »ñÈ¡µ±Ç°Î»ÖÃ
-        // SEGGER_Printf_Float(curAngle); // ´òÓ¡µ±Ç°Î»ÖÃ
-        // SEGGER_Printf_Float(targetAngle); // ´òÓ¡Ä¿±êÎ»ÖÃ
-        delayMicroseconds(100000U); // ÑÓÊ±100ms
+        HAL_GPIO_TogglePin(run_led_GPIO_Port,run_led_Pin); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        curAngle = motor.shaft_angle; // ï¿½ï¿½È¡ï¿½ï¿½Ç°Î»ï¿½ï¿½
+        // SEGGER_Printf_Float(curAngle); // ï¿½ï¿½Ó¡ï¿½ï¿½Ç°Î»ï¿½ï¿½
+        // SEGGER_Printf_Float(targetAngle); // ï¿½ï¿½Ó¡Ä¿ï¿½ï¿½Î»ï¿½ï¿½
+        delayMicroseconds(100000U); // ï¿½ï¿½Ê±100ms
     }
 }
 /**
- * @brief ¶¨Ê±Æ÷ÖÐ¶Ï»Øµ÷º¯Êý
+ * @brief ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ð¶Ï»Øµï¿½ï¿½ï¿½ï¿½ï¿½
  * 
- * @param htim ¶¨Ê±Æ÷¾ä±ú
+ * @param htim ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
     if(htim->Instance == TIM2)
     {
     } else if(htim->Instance == TIM4) {    
-        motor.loopFOC(); // Ö´ÐÐFOC
-        motor.move(targetAngle); // ¿ØÖÆÄ¿±ê½Ç¶È     
+        motor.loopFOC(); // Ö´ï¿½ï¿½FOC
+        motor.move(targetAngle); // ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Ç¶ï¿½     
 
-        // // ½«Õ¼¿Õ±È·Å´ó10±¶£¬±ãÓÚ¹Û²ì
-        // JS_Message.a = motor.driver->dc_a * 10; // AÏàÕ¼¿Õ±È
-        // JS_Message.b = motor.driver->dc_b * 10; // BÏàÕ¼¿Õ±È
-        // JS_Message.c = motor.driver->dc_c * 10; // CÏàÕ¼¿Õ±È
+        // // ï¿½ï¿½Õ¼ï¿½Õ±È·Å´ï¿½10ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¹Û²ï¿½
+        // JS_Message.a = motor.driver->dc_a * 10; // Aï¿½ï¿½Õ¼ï¿½Õ±ï¿½
+        // JS_Message.b = motor.driver->dc_b * 10; // Bï¿½ï¿½Õ¼ï¿½Õ±ï¿½
+        // JS_Message.c = motor.driver->dc_c * 10; // Cï¿½ï¿½Õ¼ï¿½Õ±ï¿½
     }
 }

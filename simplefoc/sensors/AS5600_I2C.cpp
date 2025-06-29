@@ -58,8 +58,9 @@ AS5600_I2C::AS5600_I2C(AS5600_I2CConfig_s config){
 }
 
 // 初始化
-void AS5600_I2C::init(I2C_HandleTypeDef* _hi2c1){
+void AS5600_I2C::init(I2C_HandleTypeDef* _hi2c1, I2C_HandleTypeDef* _hi2c2){
   hi2c1 = _hi2c1;
+  hi2c2 = _hi2c2;
   this->Sensor::init(); // call base class init
 }
 
@@ -70,9 +71,20 @@ float AS5600_I2C::getSensorAngle(){
   return  ( getRawCount() / (float)cpr) * _2PI ;
 }
 
+float AS5600_I2C::getOutSensorAngle(){
+  // (number of full rotations)*2PI + current sensor angle 
+  int num = getOutRawCount();
+  // Serial.println(num);
+  return  ( num / (float)cpr) * _2PI ;
+}
+
 // function reading the raw counter of the magnetic sensor
 int AS5600_I2C::getRawCount(){
     return (int)AS5600_I2C::read(angle_register_msb);
+}
+
+int AS5600_I2C::getOutRawCount(){
+  return (int)AS5600_I2C::readOut(angle_register_msb);
 }
 
 // I2C functions
@@ -93,6 +105,20 @@ int AS5600_I2C::read(uint8_t angle_reg_msb) {
     // 将读取的两个字节组合成一个整数
     int value = (buffer[0] << 8) | buffer[1];
     return value;
+}
+
+int AS5600_I2C::readOut(uint8_t angle_reg_msb) {
+  uint8_t buffer[2]; // 用于存储读取的数据
+  HAL_StatusTypeDef status;
+  // 发送寄存器地址
+  status = HAL_I2C_Mem_Read(hi2c2, chip_address << 1, angle_reg_msb, I2C_MEMADD_SIZE_8BIT, buffer, 2, 50);
+  if (status != HAL_OK) {
+      // 处理错误
+      return -1; // 返回错误代码
+  }
+  // 将读取的两个字节组合成一个整数
+  int value = (buffer[0] << 8) | buffer[1];
+  return value;
 }
 
 /*

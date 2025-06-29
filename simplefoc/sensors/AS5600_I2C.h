@@ -36,12 +36,13 @@ class AS5600_I2C: public Sensor{
     // static AS5600_I2C AS5600();
         
     /** sensor initialise pins */
-    //void init(TwoWire* _wire = &Wire); // ¸ù¾ÝSTM32µÄ¿ò¼Ü£¬ÖØÐÂÐ´
-    void init(I2C_HandleTypeDef* hi2c1);
+    //void init(TwoWire* _wire = &Wire); // ï¿½ï¿½ï¿½ï¿½STM32ï¿½Ä¿ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½Ð´
+    void init(I2C_HandleTypeDef* hi2c1, I2C_HandleTypeDef* hi2c2);
 
     // implementation of abstract functions of the Sensor class
     /** get current angle (rad) */
     float getSensorAngle() override;
+    float getOutSensorAngle() override;
 
     /** experimental function to check and fix SDA locked LOW issues */
     //int checkBus(byte sda_pin , byte scl_pin );
@@ -62,17 +63,18 @@ class AS5600_I2C: public Sensor{
     // I2C functions
     /** Read one I2C register value */
     int read(uint8_t angle_register_msb);
+    int readOut(uint8_t angle_register_msb);
 
     /**
      * Function getting current angle register value
      * it uses angle_register variable
      */
     int getRawCount();
-    
+    int getOutRawCount();
     /* the two wire instance for this sensor */
     //TwoWire* wire;
     I2C_HandleTypeDef* hi2c1;
-
+    I2C_HandleTypeDef* hi2c2;
 };
 
 

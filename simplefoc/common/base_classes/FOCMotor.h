@@ -137,12 +137,13 @@ class FOCMotor
     // State calculation methods 
     /** Shaft angle calculation in radians [rad] */
     float shaftAngle();
+    float shaftAngleOut();
     /** 
      * Shaft angle calculation function in radian per second [rad/s]
      * It implements low pass filtering
      */
     float shaftVelocity();
-
+    float shaftVelocityOut();
 
 
     /** 
@@ -154,8 +155,10 @@ class FOCMotor
     float target; //!< current target value - depends of the controller
     float feed_forward_velocity = 0.0f; //!< current feed forward velocity
   	float shaft_angle;//!< current motor angle
+    float shaft_angleOut;//!< current motor angle
   	float electrical_angle;//!< current electrical angle
   	float shaft_velocity;//!< current motor velocity 
+    float shaft_velocityOut;//!< current motor velocity 
     float current_sp;//!< target current ( q current )
     float shaft_velocity_sp;//!< current target velocity
     float shaft_angle_sp;//!< current target angle

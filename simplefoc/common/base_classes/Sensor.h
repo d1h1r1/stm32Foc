@@ -61,7 +61,7 @@ class Sensor{
          * rotations and the small angle of the shaft angle at the same time.
          */
         virtual float getAngle();
-        
+        virtual float getOutAngle();
         /** 
          * On architectures supporting it, this will return a double precision position value,
          * which should have improved precision for large position values.
@@ -77,7 +77,7 @@ class Sensor{
          * has been called in the meantime.
          */
         virtual float getVelocity();
-
+        virtual float getVelocityOut();
         /**
          * Get the number of full rotations
          * Base implementation uses the values returned by update() so that the same
@@ -96,7 +96,7 @@ class Sensor{
          * sensor hardware.
          */
         virtual void update();
-
+        virtual void Outupdate();
         /** 
          * returns 0 if it does need search for absolute zero
          * 0 - magnetic sensor (& encoder with index which is found)
@@ -119,6 +119,7 @@ class Sensor{
          * Use update() when calling from outside code.
          */
         virtual float getSensorAngle()=0;
+        virtual float getOutSensorAngle()=0;
         /**
          * Call Sensor::init() from your sensor subclass's init method if you want smoother startup
          * The base class init() method calls getSensorAngle() several times to initialize the internal fields
@@ -129,12 +130,18 @@ class Sensor{
 
         // velocity calculation variables
         float velocity=0.0f;
-        float angle_prev=0.0f; // result of last call to getSensorAngle(), used for full rotations and velocity
+        float angle_prev=0; // result of last call to getSensorAngle(), used for full rotations and velocity
+        float angle_prevOut=0; // result of last call to getSensorAngle(), used for full rotations and velocity
         long angle_prev_ts=0; // timestamp of last call to getAngle, used for velocity
-        float vel_angle_prev=0.0f; // angle at last call to getVelocity, used for velocity
+        long angle_prev_tsOut=0; // timestamp of last call to getAngle, used for velocity
+        float vel_angle_prev=0; // angle at last call to getVelocity, used for velocity
+        float vel_angle_prevOut=0; // angle at last call to getVelocity, used for velocity
         long vel_angle_prev_ts=0; // last velocity calculation timestamp
+        long vel_angle_prev_tsOut=0; // last velocity calculation timestamp
         int32_t full_rotations=0; // full rotation tracking
+        int32_t full_rotationsOut=0; // full rotation tracking
         int32_t vel_full_rotations=0; // previous full rotation value for velocity calculation
+        int32_t vel_full_rotationsOut=0; // previous full rotation value for velocity calculation
 };
 
 #endif

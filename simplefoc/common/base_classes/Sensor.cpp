@@ -15,6 +15,16 @@ void Sensor::update() {
     angle_prev = val;
 }
 
+void Sensor::Outupdate() {
+    float val = getOutSensorAngle();
+    // Serial.println(val);
+    angle_prev_tsOut = _micros();
+    float d_angle = val - angle_prevOut;
+    // if overflow happened track it as full rotation
+    if(abs(d_angle) > (0.8f*_2PI) ) full_rotationsOut += ( d_angle > 0 ) ? -1 : 1; 
+    // Serial.println(full_rotations);
+    angle_prevOut = val;
+}
 
  /** get current angular velocity (rad/s) */
 float Sensor::getVelocity() {
@@ -35,7 +45,19 @@ float Sensor::getVelocity() {
     return velocity;
 }
 
-
+float Sensor::getVelocityOut() {
+    // calculate sample time
+    float Ts = (angle_prev_tsOut - vel_angle_prev_tsOut)*1e-6;
+    // quick fix for strange cases (micros overflow)
+    if(Ts <= 0) Ts = 1e-3f;
+    // velocity calculation
+    float vel = ( (float)(full_rotationsOut - vel_full_rotationsOut)*_2PI + (angle_prevOut - vel_angle_prevOut) ) / Ts;    
+    // save variables for future pass
+    vel_angle_prevOut = angle_prevOut;
+    vel_full_rotationsOut = full_rotationsOut;
+    vel_angle_prev_tsOut = angle_prev_tsOut;
+    return vel;
+}
 
 void Sensor::init() {
     // initialize all the internal variables of Sensor to ensure a "smooth" startup (without a 'jump' from zero)
@@ -61,7 +83,9 @@ float Sensor::getAngle(){
     return (float)full_rotations * _2PI + angle_prev;
 }
 
-
+float Sensor::getOutAngle(){
+    return (float)full_rotationsOut * _2PI + angle_prevOut;
+}
 
 double Sensor::getPreciseAngle() {
     return (double)full_rotations * (double)_2PI + (double)angle_prev;

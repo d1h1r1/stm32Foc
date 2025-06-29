@@ -111,7 +111,7 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 //	STMFLASH_Write(FLASH_SAVE_ADDR,(u16*)TEXT_Buffer_1,SIZE);//第一次写读
-	STMFLASH_Read(FLASH_SAVE_ADDR,(u16*)datatemp,SIZE);
+//	STMFLASH_Read(FLASH_SAVE_ADDR,(u16*)datatemp,SIZE);
   DWT_Timer_Init(); // ��ʼ��DWT��ʱ��
   main_Cpp();       // ��תC++����
   /* USER CODE END 2 */
