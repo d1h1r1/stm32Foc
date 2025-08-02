@@ -14,3 +14,5 @@
 *.eide-template
 
 /simplefoc_stm32f103
+
+/MDK-ARM/simplefoc_stm32f103
