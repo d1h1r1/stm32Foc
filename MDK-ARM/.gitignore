@@ -12,3 +12,5 @@
 # eide template
 *.ept
 *.eide-template
+
+/simplefoc_stm32f103

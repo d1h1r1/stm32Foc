@@ -47,6 +47,7 @@ simplefoc_stm32f103/as5600_i2c.o: ..\simplefoc\sensors\AS5600_I2C.cpp \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\cstddef \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\limits \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\__undef_macros \
+  ..\Core\Inc\usart.h ..\Core\Inc\main.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\stdio.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\string.h \

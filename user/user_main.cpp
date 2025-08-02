@@ -4,106 +4,127 @@
 #include "BLDCMotor.h"
 #include "InlineCurrentSense.h"
 
-// �ⲿ����
+// ??????
 extern struct AS5600_I2CConfig_s AS5600_I2C_Config;
 extern I2C_HandleTypeDef hi2c1;
 extern I2C_HandleTypeDef hi2c2;
 
-AS5600_I2C AS5600_1(AS5600_I2C_Config); // ����AS5600_I2C����
+AS5600_I2C AS5600_1(AS5600_I2C_Config); // ????AS5600_I2C????
 BLDCDriver3PWM motorDriver(GPIO_PIN_0,GPIO_PIN_1,GPIO_PIN_2); // PA0,PA1,PA2
-BLDCMotor motor(11); // ����BLDCMotor����,�����7�Լ�
-InlineCurrentSense currentSense(0.001f,50.0f,ADC_CHANNEL_3,ADC_CHANNEL_4,NOT_SET); // ������������������
+BLDCMotor motor(11);  // ????BLDCMotor????,?????11???
+InlineCurrentSense currentSense(0.001f,20.0f,ADC_CHANNEL_3,ADC_CHANNEL_4,NOT_SET);  // ??????????????????
 
-float targetAngle = 3.0f; // Ŀ��Ƕ�
-float curAngle = 0.0f; // ��ǰ�Ƕ�
-
+float targetAngle = 0.0f;  // ?????
+float curAngle = 0.0f;  // ??????
+uint8_t rx_data[255];
+uint8_t getAngle_rx;
 /**
- * @brief C++������ں���
+ * @brief C++??????????
  * 
  */
 void main_Cpp(void)
 {
-    AS5600_1.init(&hi2c1, &hi2c2); // ��ʼ��AS5600
-    motorDriver.voltage_power_supply = DEF_POWER_SUPPLY; // ���õ�ѹ
-    motorDriver.init();   // ��ʼ���������
-
-    currentSense.skip_align = true; // ����������������
-    currentSense.init();   // ��ʼ������������
-    currentSense.linkDriver(&motorDriver); // ��������������������
+    AS5600_1.init(&hi2c1, &hi2c2); // ?????AS5600
+    motorDriver.voltage_power_supply = DEF_POWER_SUPPLY; // ??????
+    motorDriver.init();    // ????????????
+    currentSense.skip_align = true; // ????????????????
+    currentSense.init();    // ???????????????
+    currentSense.linkDriver(&motorDriver); // ????????????????????
                             
-    motor.linkSensor(&AS5600_1); // ���ӱ�����
-    motor.linkDriver(&motorDriver); // ����������
-    motor.linkCurrentSense(&currentSense); // ���ӵ���������
-    motor.voltage_sensor_align = 6; // У׼ƫ��offsetʱ�����õ��ĵ�ѹֵ���൱��ռ�ձ�4V / 12V = 1/3��
-    motor.controller = MotionControlType::angle; // ���ÿ�����ģʽ(λ�ñջ�ģʽ)
+    motor.linkSensor(&AS5600_1); // ????????dd
+    motor.linkDriver(&motorDriver); // ??????????
+    motor.linkCurrentSense(&currentSense); // ?????????????
+    motor.voltage_sensor_align = 6; // ��????offset???????????????????????4V / 12V = 1/3??
+    motor.controller = MotionControlType::velocity_openloop; // ???????????(��??????)
 
-    motor.PID_velocity.P = 0.50f; // �����ٶ�P
-    motor.PID_velocity.I = 0.0f; // �����ٶ�I
-    motor.PID_velocity.D = 0; // �����ٶ�D
-    motor.PID_velocity.output_ramp = 0; // 0��������б��
-    motor.LPF_velocity.Tf = 0.01f; // �����ٶȵ�ͨ�˲���
+    motor.PID_velocity.P = 1.1f; // ???????P
+    motor.PID_velocity.I = 0.0f; // ???????I
+    motor.PID_velocity.D = 0; // ???????D
+    motor.PID_velocity.output_ramp = 1000; // 0????????��??
+    motor.LPF_velocity.Tf = 0.005f; // ??????????????
 
-    motor.P_angle.P = 10.0f; // λ�û�P
-    motor.P_angle.I = 0.0f; // λ�û�I
-    motor.P_angle.D = 0.0f;  // λ�û�D
-    motor.P_angle.output_ramp = 0; // ������
+    motor.P_angle.P = 1.1f; // ��???P
+    motor.P_angle.I = 0.0f; // ��???I
+    motor.P_angle.D = 0.0f;  // ��???D
+    motor.P_angle.output_ramp = 1000; // ??????
     
-    motor.PID_current_q.P = 2.0f;
+    motor.PID_current_q.P = 1.1f;
     motor.PID_current_q.I = 0.0f;
     motor.PID_current_q.D = 0;
-    motor.PID_current_q.output_ramp = 0; // ������
-    motor.LPF_current_q.Tf = 0.01f;      // ��ͨ�˲���
+    motor.PID_current_q.output_ramp = 1000; // ??????
+    motor.LPF_current_q.Tf = 0.005f;      // ????????
     
-    motor.PID_current_d.P = 2.0;
+    motor.PID_current_d.P = 1.1f;
     motor.PID_current_d.I = 0.0f;
     motor.PID_current_d.D = 0;
-    motor.PID_current_d.output_ramp = 0; // 0��������б��
-    motor.LPF_current_d.Tf = 0.01f;
+    motor.PID_current_d.output_ramp = 1000; // 0????????��??
+    motor.LPF_current_d.Tf = 0.005f;
     
-    motor.current_limit = DEF_CURRENT_LIMIT; // ��������
-    motor.voltage_limit = DEF_VOLTAGE_LIMIT; // ��ѹ����
-    motor.velocity_limit = DEF_VELOCITY_LIMIT; // λ�ñջ�ģʽʱ�����λ�û�PID��limit
-    motor.torque_controller = TorqueControlType::dc_current; // Iq�ջ���Id = 0
+    motor.current_limit = DEF_CURRENT_LIMIT; // ????????
+    motor.voltage_limit = DEF_VOLTAGE_LIMIT; // ???????
+    motor.velocity_limit = DEF_VELOCITY_LIMIT; // ��????????????��???PID??limit
+    motor.torque_controller = TorqueControlType::voltage; // Iq?????Id = 0
     
-    motor.init(); // ��ʼ�����
+    motor.init(); // ????????
 
     motor.PID_current_q.limit = DEF_VOLTAGE_LIMIT;
     motor.PID_current_d.limit = DEF_VOLTAGE_LIMIT;
 
-    motor.foc_modulation = FOCModulationType::SpaceVectorPWM; // ���Ҳ���Ϊ������
-    motor.sensor_direction = Direction::CCW; // ֮ǰУ׼��������ʱ��֪���������ķ�����CCW������У׼���������½ھ�֪����
-    motor.initFOC(); // ��ʼ��FOC
+    motor.foc_modulation = FOCModulationType::SpaceVectorPWM; // ??????????????
+    motor.sensor_direction = Direction::CW; // ??��????????????????????????????CCW??????��??????????????????
+    motor.zero_electric_angle = 0;
+    motor.initFOC(); // ?????FOC
+    // (motor.zero_electric_angle); // ???????????
+    // (AS5600_1.getMechanicalAngle()); // ????????????
 
-    // (motor.zero_electric_angle); // ��ӡ������Ƕ�
-    // (AS5600_1.getMechanicalAngle()); // ��ӡ�������Ƕ�
-
-    HAL_Delay(1000); // ��ʱ1s
-    HAL_TIM_Base_Start_IT(&htim4); // ����TIM4��ʱ��
+    HAL_Delay(1000); // ???1s
+//		HAL_TIM_Base_Start_IT(&htim4); // ????TIM4?????
 
     while(1) {
-        HAL_GPIO_TogglePin(run_led_GPIO_Port,run_led_Pin); // ������������
-        curAngle = motor.shaft_angle; // ��ȡ��ǰλ��
-        // SEGGER_Printf_Float(curAngle); // ��ӡ��ǰλ��
-        // SEGGER_Printf_Float(targetAngle); // ��ӡĿ��λ��
-        delayMicroseconds(100000U); // ��ʱ100ms
+			 HAL_UART_Receive(&huart1,&getAngle_rx,sizeof(rx_data), 1000);
+			 targetAngle = getAngle_rx;
+			 motor.loopFOC(); // ???FOC
+       motor.move(targetAngle); // ?????????   
+//			 HAL_Delay(1000);
+//			targetAngle++;
+//			if (targetAngle == 20){
+//				targetAngle = 0;
+//			}
+//			HAL_Delay(2000);
+//        HAL_GPIO_TogglePin(run_led_GPIO_Port,run_led_Pin); // ????????????
+//        curAngle = motor.shaft_angleOut; // ??????��??
+//        // SEGGER_Printf_Float(curAngled); // ??????��??
+//        // SEGGER_Printf_Float(targetAngle); // ??????��??
+//       delayMicroseconds(100000U); // ???100ms
     }
 }
 /**
- * @brief ��ʱ���жϻص�����
+ * @brief ??????��???????
  * 
- * @param htim ��ʱ�����
+ * @param htim ????????
  */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
     if(htim->Instance == TIM2)
     {
-    } else if(htim->Instance == TIM4) {    
-        motor.loopFOC(); // ִ��FOC
-        motor.move(targetAngle); // ����Ŀ��Ƕ�     
-
-        // // ��ռ�ձȷŴ�10�������ڹ۲�
-        // JS_Message.a = motor.driver->dc_a * 10; // A��ռ�ձ�
-        // JS_Message.b = motor.driver->dc_b * 10; // B��ռ�ձ�
-        // JS_Message.c = motor.driver->dc_c * 10; // C��ռ�ձ�
+    } else if(htim->Instance == TIM4) {  
+        motor.loopFOC(); // ???FOC
+        motor.move(targetAngle); // ?????????     
+				
+        // // ????????10??????????
+        // JS_Message.a = motor.driver->dc_a * 10; // A??????
+        // JS_Message.b = motor.driver->dc_b * 10; // B??????
+        // JS_Message.c = motor.driver->dc_c * 10; // C??????
     }
 }
+
+
+//void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+//{
+//  if (huart->Instance == USART1) 
+//  {
+//		 HAL_UART_IRQHandler(&huart1);	  
+//     HAL_UART_Receive_IT(&huart1,rx_data,sizeof(rx_data));
+//		 UART_SendChar('1');
+//  }
+//}

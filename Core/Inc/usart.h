@@ -41,7 +41,11 @@ extern UART_HandleTypeDef huart1;
 void MX_USART1_UART_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+void UART_SendChar(uint8_t ch);
+void UART_SendString(const char *str);
+void UART_SendInt(int32_t num, uint8_t base);
+void UART_SendFloat(float num, uint8_t decimals);
+void UART_Printf(unsigned BufferIndex, const char *format, ...);
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

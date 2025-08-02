@@ -35,7 +35,7 @@ simplefoc_stm32f103/stm32f1xx_it.o: ..\Core\Src\stm32f1xx_it.c \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
   ..\components\DWT\dwt_timer.h \
-  D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\math.h \
-  D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\math.h ..\Core\Inc\usart.h \
+  ..\Core\Inc\main.h D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\string.h \
   ..\Core\Inc\stm32f1xx_it.h

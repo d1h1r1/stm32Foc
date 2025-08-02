@@ -48,11 +48,12 @@ simplefoc_stm32f103/bldcdriver3pwm.o: \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\cstddef \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\limits \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\__undef_macros \
+  ..\Core\Inc\usart.h ..\Core\Inc\main.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\stdio.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\string.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\string.h ..\Core\Inc\tim.h \
-  ..\Core\Inc\main.h ..\simplefoc\common\base_classes\BLDCDriver.h \
+  ..\simplefoc\common\base_classes\BLDCDriver.h \
   ..\simplefoc\common\foc_utils.h ..\simplefoc\common\time_utils.h \
   ..\simplefoc\common\foc_utils.h ..\simplefoc\common\defaults.h \
   ..\components\bsp_pwm\bsp_pwm.h

@@ -36,7 +36,6 @@ simplefoc_stm32f103/bsp_pwm.o: ..\components\bsp_pwm\bsp_pwm.c \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
   ..\components\DWT\dwt_timer.h \
-  D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\math.h \
-  D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\string.h ..\Core\Inc\tim.h \
-  ..\Core\Inc\main.h
+  D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\math.h ..\Core\Inc\usart.h \
+  ..\Core\Inc\main.h D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\string.h ..\Core\Inc\tim.h

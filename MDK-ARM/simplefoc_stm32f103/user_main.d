@@ -47,6 +47,7 @@ simplefoc_stm32f103/user_main.o: ..\user\user_main.cpp \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\cstddef \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\limits \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\__undef_macros \
+  ..\Core\Inc\usart.h ..\Core\Inc\main.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\stdio.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\string.h \
@@ -57,8 +58,7 @@ simplefoc_stm32f103/user_main.o: ..\user\user_main.cpp \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\inttypes.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\inttypes.h \
   ..\simplefoc\common\foc_utils.h ..\simplefoc\drivers\BLDCDriver3PWM.h \
-  ..\Core\Inc\tim.h ..\Core\Inc\main.h \
-  ..\simplefoc\common\base_classes\BLDCDriver.h \
+  ..\Core\Inc\tim.h ..\simplefoc\common\base_classes\BLDCDriver.h \
   ..\simplefoc\common\defaults.h ..\components\bsp_pwm\bsp_pwm.h \
   ..\simplefoc\BLDCMotor.h ..\simplefoc\common\base_classes\FOCMotor.h \
   ..\simplefoc\common\base_classes\Sensor.h \

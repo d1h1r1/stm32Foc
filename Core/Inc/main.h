@@ -34,6 +34,7 @@ extern "C" {
 #include "SEGGER_RTT.h"
 #include "dwt_timer.h"
 #include "math.h"
+#include "usart.h"
 #include "stdlib.h"
 #include "stdio.h"
 #include "string.h"

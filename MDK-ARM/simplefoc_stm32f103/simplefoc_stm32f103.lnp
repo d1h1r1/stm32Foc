@@ -1,5 +1,6 @@
 --cpu Cortex-M3
 "simplefoc_stm32f103\startup_stm32f103xb.o"
+"simplefoc_stm32f103\stmflash.o"
 "simplefoc_stm32f103\main.o"
 "simplefoc_stm32f103\gpio.o"
 "simplefoc_stm32f103\adc.o"
@@ -8,7 +9,6 @@
 "simplefoc_stm32f103\usart.o"
 "simplefoc_stm32f103\stm32f1xx_it.o"
 "simplefoc_stm32f103\stm32f1xx_hal_msp.o"
-"simplefoc_stm32f103\stmflash.o"
 "simplefoc_stm32f103\stm32f1xx_hal_gpio_ex.o"
 "simplefoc_stm32f103\stm32f1xx_hal_adc.o"
 "simplefoc_stm32f103\stm32f1xx_hal_adc_ex.o"

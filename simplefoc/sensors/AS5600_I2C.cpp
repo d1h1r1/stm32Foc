@@ -97,7 +97,7 @@ int AS5600_I2C::read(uint8_t angle_reg_msb) {
     uint8_t buffer[2]; // 用于存储读取的数据
     HAL_StatusTypeDef status;
     // 发送寄存器地址
-    status = HAL_I2C_Mem_Read(hi2c1, chip_address << 1, angle_reg_msb, I2C_MEMADD_SIZE_8BIT, buffer, 2, 50);
+    status = HAL_I2C_Mem_Read(hi2c1, chip_address << 1, angle_reg_msb, I2C_MEMADD_SIZE_8BIT, buffer, 2, 500);
     if (status != HAL_OK) {
         // 处理错误
         return -1; // 返回错误代码
@@ -111,7 +111,7 @@ int AS5600_I2C::readOut(uint8_t angle_reg_msb) {
   uint8_t buffer[2]; // 用于存储读取的数据
   HAL_StatusTypeDef status;
   // 发送寄存器地址
-  status = HAL_I2C_Mem_Read(hi2c2, chip_address << 1, angle_reg_msb, I2C_MEMADD_SIZE_8BIT, buffer, 2, 50);
+  status = HAL_I2C_Mem_Read(hi2c2, chip_address << 1, angle_reg_msb, I2C_MEMADD_SIZE_8BIT, buffer, 2, 500);
   if (status != HAL_OK) {
       // 处理错误
       return -1; // 返回错误代码

@@ -13,6 +13,7 @@ void Sensor::update() {
     // if overflow happened track it as full rotation
     if(abs(d_angle) > (0.8f*_2PI) ) full_rotations += ( d_angle > 0 ) ? -1 : 1; 
     angle_prev = val;
+    // UART_Printf(0, "angle_prev: %f\n", angle_prev);
 }
 
 void Sensor::Outupdate() {
@@ -24,6 +25,7 @@ void Sensor::Outupdate() {
     if(abs(d_angle) > (0.8f*_2PI) ) full_rotationsOut += ( d_angle > 0 ) ? -1 : 1; 
     // Serial.println(full_rotations);
     angle_prevOut = val;
+    // UART_Printf(0, "angle_prevOut: %f\n", angle_prevOut);
 }
 
  /** get current angular velocity (rad/s) */

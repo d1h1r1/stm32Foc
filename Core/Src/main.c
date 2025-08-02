@@ -59,9 +59,9 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 
 
-const u8 TEXT_Buffer_1[]={0x11, 0x22, 0x33};//要写入到STM32 FLASH的字符串数组
-#define SIZE sizeof(TEXT_Buffer_1)	 	//数组长度
-u8 datatemp[SIZE];  //Flash读取缓存数组
+//const u8 TEXT_Buffer_1[]={0x11, 0x22, 0x33};//要写入到STM32 FLASH的字符串数组
+//#define SIZE sizeof(TEXT_Buffer_1)	 	//数组长度
+//u8 datatemp[SIZE];  //Flash读取缓存数组
 	
 /**
  * @brief RTTͨ��0��ӡ������
@@ -112,7 +112,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
 //	STMFLASH_Write(FLASH_SAVE_ADDR,(u16*)TEXT_Buffer_1,SIZE);//第一次写读
 //	STMFLASH_Read(FLASH_SAVE_ADDR,(u16*)datatemp,SIZE);
-  DWT_Timer_Init(); // ��ʼ��DWT��ʱ��
+	
+//  DWT_Timer_Init(); // ��ʼ��DWT��ʱ��
   main_Cpp();       // ��תC++����
   /* USER CODE END 2 */
 
@@ -120,6 +121,13 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+//			uint8_t UART_BUF[12] = "you press A!";
+//			HAL_GPIO_WritePin(GPIOA,GPIO_PIN_8,GPIO_PIN_SET);
+//			HAL_UART_Transmit(&huart1,UART_BUF,12,0xffff);  
+//			HAL_GPIO_WritePin(GPIOA,GPIO_PIN_8,GPIO_PIN_RESET);	
+//			HAL_GPIO_WritePin(GPIOA,GPIO_PIN_8,GPIO_PIN_SET);
+//			HAL_UART_Transmit_IT(&huart1,UART_BUF,12);  
+//			HAL_GPIO_WritePin(GPIOA,GPIO_PIN_8,GPIO_PIN_RESET);	
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

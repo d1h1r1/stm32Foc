@@ -2,7 +2,7 @@
 //#include "./communication/SimpleFOCDebug.h"
 
 // 定义一个宏，将SIMPLEFOC_DEBUG替换为SEGGER_RTT_printf
-#define SIMPLEFOC_DEBUG(fmt, ...) SEGGER_RTT_printf(0, fmt "\n", ##__VA_ARGS__)
+#define SIMPLEFOC_DEBUG(fmt, ...) UART_Printf(0, fmt "\n", ##__VA_ARGS__)
 
 // see https://www.youtube.com/watch?v=InzXA7mWBWE Slide 5
 // each is 60 degrees with values for 3 phases of 1=positive -1=negative 0=high-z
@@ -320,7 +320,6 @@ void BLDCMotor::loopFOC() {
   // update sensor - do this even in open-loop mode, as user may be switching between modes and we could lose track
   //                 of full rotations otherwise.
   if (sensor) sensor->update();
-
   // if open-loop do nothing
   if( controller==MotionControlType::angle_openloop || controller==MotionControlType::velocity_openloop ) return;
   
@@ -331,6 +330,7 @@ void BLDCMotor::loopFOC() {
   // This function will not have numerical issues because it uses Sensor::getMechanicalAngle() 
   // which is in range 0-2PI
   electrical_angle = electricalAngle();
+  
   switch (torque_controller) {
     case TorqueControlType::voltage:
       // no need to do anything really
@@ -367,6 +367,7 @@ void BLDCMotor::loopFOC() {
   }
 
   // set the phase voltage - FOC heart function :)
+  // UART_Printf(0, "setPhaseVoltage: %f %f %f\n", voltage.q, voltage.d, electrical_angle);
   setPhaseVoltage(voltage.q, voltage.d, electrical_angle);
 }
 
@@ -387,13 +388,16 @@ void BLDCMotor::move(float new_target) {
   //                        For this reason it is NOT precise when the angles become large.
   //                        Additionally, the way LPF works on angle is a precision issue, and the angle-LPF is a problem
   //                        when switching to a 2-component representation.
-  sensor->Outupdate();
+if (sensor) sensor->Outupdate();
   if( controller!=MotionControlType::angle_openloop && controller!=MotionControlType::velocity_openloop ) 
     shaft_angle = shaftAngleOut(); // read value even if motor is disabled to keep the monitoring updated but not in openloop mode
-//		shaft_angle = shaftAngle(); // read value even if motor is disabled to keep the monitoring updated but not in openloop mode
+//		UART_Printf(0, "shaft_angle: %f\n", shaft_angle);
+//		UART_SendFloat(shaft_angle,2);
+		// UART_Printf(0, "shaft_angle: %f\n", shaft_angle);
+		// shaft_angle = shaftAngle(); // read value even if motor is disabled to keep the monitoring updated but not in openloop mode
   // get angular velocity  TODO the velocity reading probably also shouldn't happen in open loop modes?
   shaft_velocity = shaftVelocityOut(); // read value even if motor is disabled to keep the monitoring updated
-
+  // shaft_velocity = shaftVelocity();// read value even if motor is disabled to keep the monitoring updated
   // if disabled do nothing
   if(!enabled) return;
   // set internal target variable
@@ -429,6 +433,7 @@ void BLDCMotor::move(float new_target) {
       shaft_velocity_sp = _constrain(shaft_velocity_sp,-velocity_limit, velocity_limit);
       // calculate the torque command - sensor precision: this calculation is ok, but based on bad value from previous calculation
       current_sp = PID_velocity(shaft_velocity_sp - shaft_velocity); // if voltage torque control
+      // UART_Printf(0, "current_sp: %f\n", current_sp);
       // if torque controlled through voltage
       if(torque_controller == TorqueControlType::voltage){
         // use voltage if phase-resistance not provided
@@ -642,6 +647,7 @@ float BLDCMotor::angleOpenloop(float target_angle){
   // TODO sensor precision: this calculation is not numerically precise. The angle can grow to the point
   //                        where small position changes are no longer captured by the precision of floats
   //                        when the total position is large.
+//	UART_Printf(0, "angle: %f %f\n", target_angle, shaft_angle);
   if(abs( target_angle - shaft_angle ) > abs(velocity_limit*Ts)){
     shaft_angle += _sign(target_angle - shaft_angle) * abs( velocity_limit )*Ts;
     shaft_velocity = velocity_limit;
@@ -649,7 +655,6 @@ float BLDCMotor::angleOpenloop(float target_angle){
     shaft_angle = target_angle;
     shaft_velocity = 0;
   }
-
   // use voltage limit or current limit
   float Uq = voltage_limit;
   if(_isset(phase_resistance)){
@@ -659,9 +664,11 @@ float BLDCMotor::angleOpenloop(float target_angle){
   }
   // set the maximal allowed voltage (voltage_limit) with the necessary angle
   // sensor precision: this calculation is OK due to the normalisation
+  // UART_Printf(0, "setPhaseVoltage: %f %f \n", Uq, _electricalAngle(_normalizeAngle(shaft_angle), pole_pairs));
   setPhaseVoltage(Uq,  0, _electricalAngle(_normalizeAngle(shaft_angle), pole_pairs));
 
   // save timestamp for next call
+//	UART_Printf(0, "current_sp: %f %f\n", Uq, shaft_angle);
   open_loop_timestamp = now_us;
 
   return Uq;

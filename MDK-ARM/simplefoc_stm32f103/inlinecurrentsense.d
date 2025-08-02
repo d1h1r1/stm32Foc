@@ -48,13 +48,13 @@ simplefoc_stm32f103/inlinecurrentsense.o: \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\cstddef \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\limits \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\__undef_macros \
+  ..\Core\Inc\usart.h ..\Core\Inc\main.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\stdio.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\libcxx\string.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\string.h ..\Core\Inc\adc.h \
-  ..\Core\Inc\main.h ..\simplefoc\common\foc_utils.h \
-  ..\simplefoc\common\time_utils.h ..\simplefoc\common\foc_utils.h \
-  ..\simplefoc\common\defaults.h \
+  ..\simplefoc\common\foc_utils.h ..\simplefoc\common\time_utils.h \
+  ..\simplefoc\common\foc_utils.h ..\simplefoc\common\defaults.h \
   ..\simplefoc\common\base_classes\CurrentSense.h \
   ..\simplefoc\common\base_classes\BLDCDriver.h \
   ..\simplefoc\common\base_classes\..\foc_utils.h \

@@ -36,6 +36,6 @@ simplefoc_stm32f103/dwt_timer.o: ..\components\DWT\dwt_timer.c \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
   ..\components\DWT\dwt_timer.h \
-  D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\math.h \
-  D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\math.h ..\Core\Inc\usart.h \
+  ..\Core\Inc\main.h D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\string.h

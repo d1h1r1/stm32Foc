@@ -19,6 +19,9 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "usart.h"
+#include <string.h>
+#include <stdarg.h>
+#include <stdio.h>
 
 /* USER CODE BEGIN 0 */
 
@@ -27,16 +30,12 @@
 UART_HandleTypeDef huart1;
 
 /* USART1 init function */
-
 void MX_USART1_UART_Init(void)
 {
-
   /* USER CODE BEGIN USART1_Init 0 */
-
   /* USER CODE END USART1_Init 0 */
 
   /* USER CODE BEGIN USART1_Init 1 */
-
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
   huart1.Init.BaudRate = 115200;
@@ -51,19 +50,15 @@ void MX_USART1_UART_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN USART1_Init 2 */
-
   /* USER CODE END USART1_Init 2 */
-
 }
 
 void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
 {
-
   GPIO_InitTypeDef GPIO_InitStruct = {0};
   if(uartHandle->Instance==USART1)
   {
   /* USER CODE BEGIN USART1_MspInit 0 */
-
   /* USER CODE END USART1_MspInit 0 */
     /* USART1 clock enable */
     __HAL_RCC_USART1_CLK_ENABLE();
@@ -87,18 +82,15 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     HAL_NVIC_SetPriority(USART1_IRQn, 0, 0);
     HAL_NVIC_EnableIRQ(USART1_IRQn);
   /* USER CODE BEGIN USART1_MspInit 1 */
-
   /* USER CODE END USART1_MspInit 1 */
   }
 }
 
 void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 {
-
   if(uartHandle->Instance==USART1)
   {
   /* USER CODE BEGIN USART1_MspDeInit 0 */
-
   /* USER CODE END USART1_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_USART1_CLK_DISABLE();
@@ -112,11 +104,128 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
     /* USART1 interrupt Deinit */
     HAL_NVIC_DisableIRQ(USART1_IRQn);
   /* USER CODE BEGIN USART1_MspDeInit 1 */
-
   /* USER CODE END USART1_MspDeInit 1 */
   }
 }
 
 /* USER CODE BEGIN 1 */
+
+// ���ڷ��Ϳ�ʵ��
+
+/**
+  * @brief  ���͵����ַ�
+  * @param  ch: Ҫ���͵��ַ�
+  * @retval None
+  */
+void UART_SendChar(uint8_t ch)
+{		
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_SET);
+    HAL_UART_Transmit(&huart1, &ch, 1, HAL_MAX_DELAY);
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_RESET);
+}
+
+/**
+  * @brief  �����ַ���
+  * @param  str: Ҫ���͵��ַ���ָ��
+  * @retval None
+  */
+void UART_SendString(const char *str)
+{
+    if(str == NULL) return;
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_SET);
+    HAL_UART_Transmit(&huart1, (uint8_t *)str, strlen(str), HAL_MAX_DELAY);
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_RESET);
+}
+
+/**
+  * @brief  ��������
+  * @param  num: Ҫ���͵�����
+  * @param  base: ���� (10, 16, 8, 2)
+  * @retval None
+  */
+void UART_SendInt(int num, uint8_t base)
+{
+    char buffer[35]; // �㹻���32λ����
+    
+    if(base == 10) {
+        sprintf(buffer, "%d", num);
+    } else if(base == 16) {
+        sprintf(buffer, "0x%X", num);
+    } else if(base == 8) {
+        sprintf(buffer, "0%o", num);
+    } else if(base == 2) {
+        // ���������⴦��
+        buffer[0] = '0';
+        buffer[1] = 'b';
+        for(int8_t i = 0; i < 32; i++) {
+            buffer[2 + i] = (num & (1 << (31 - i))) ? '1' : '0';
+        }
+        buffer[34] = '\0';
+    } else {
+        return; // ��֧�ֵĽ���
+    }
+    UART_SendString(buffer);
+}
+
+/**
+  * @brief  ���͸�����
+  * @param  num: Ҫ���͵ĸ�����
+  * @param  decimals: С��λ��
+  * @retval None
+  */
+void UART_SendFloat(float num, uint8_t decimals)
+{
+    char format[10];
+    char buffer[20];
+    
+    if(decimals > 6) decimals = 6;
+    
+    sprintf(format, "%%.%df", decimals);
+    sprintf(buffer, format, num);
+    UART_SendString(buffer);
+}
+
+/**
+  * @brief  ��ʽ����� (����printf)
+  * @param  format: ��ʽ���ַ���
+  * @param  ...: �ɱ����
+  * @retval None
+  */
+void UART_Printf(unsigned BufferIndex, const char *format, ...)
+{
+    char buffer[128];
+    va_list args;
+    
+    va_start(args, format);
+    vsnprintf(buffer, sizeof(buffer), format, args);
+    va_end(args);
+    UART_SendString(buffer);
+}
+
+/**
+  * @brief  ���ٷ��͵����ַ�(������)
+  * @param  ch: Ҫ���͵��ַ�
+  * @retval None
+  */
+void UART_PutChar(uint8_t ch)
+{
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_SET);
+    huart1.Instance->DR = ch;
+    while(!__HAL_UART_GET_FLAG(&huart1, UART_FLAG_TXE));
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_RESET);
+}
+
+/**
+  * @brief  ����Ԥ������Ϣ(��ָʾ��)
+  * @param  None
+  * @retval None
+  */
+void UART_SendPredefinedMessage(void)
+{
+    uint8_t UART_BUF[12] = "you press A!";
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_SET);
+    HAL_UART_Transmit(&huart1, UART_BUF, sizeof(UART_BUF), HAL_MAX_DELAY);  
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_RESET);
+}
 
 /* USER CODE END 1 */
