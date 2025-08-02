@@ -39,5 +39,5 @@ simplefoc_stm32f103/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Core\Inc\main.h D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   D:\keil\keil5\ARM\ARMCLANG\Bin\..\include\string.h ..\Core\Inc\adc.h \
   ..\Core\Inc\i2c.h ..\Core\Inc\tim.h ..\Core\Inc\usart.h \
-  ..\Core\Inc\gpio.h ..\Core\Inc\stmflash.h ..\user\user_main.h \
+  ..\Core\Inc\gpio.h ..\user\user_main.h \
   ..\simplefoc\common\time_utils.h ..\simplefoc\common\foc_utils.h

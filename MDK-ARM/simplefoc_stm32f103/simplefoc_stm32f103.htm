@@ -3,9 +3,9 @@
 <title>Static Call Graph - [simplefoc_stm32f103\simplefoc_stm32f103.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image simplefoc_stm32f103\simplefoc_stm32f103.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6110004: Last Updated: Sat Aug  2 20:17:43 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6110004: Last Updated: Sat Aug  2 21:46:11 2025
 <BR><P>
-<H3>Maximum Stack Usage =        416 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        408 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 __rt_entry_main &rArr; main &rArr; main_Cpp &rArr; BLDCDriver3PWM::init() &rArr; SEGGER_Printf_Float &rArr; SEGGER_RTT_printf &rArr; SEGGER_RTT_vprintf &rArr; _PrintUnsigned &rArr; _StoreChar &rArr; SEGGER_RTT_Write &rArr; SEGGER_RTT_WriteNoLock &rArr; _WriteBlocking
 <P>
@@ -14,7 +14,7 @@ Functions with no stack information
 </H3><UL>
  <LI><a href="#[c2]">__user_initial_stackheap</a>
  <LI><a href="#[58]">__cxa_pure_virtual</a>
- <LI><a href="#[163]">abort_message</a>
+ <LI><a href="#[162]">abort_message</a>
 </UL>
 </UL>
 <P>
@@ -419,7 +419,7 @@ Global Symbols
 <P><STRONG><a name="[1b8]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[93]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 416 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 408 + Unknown Stack Size
 <LI>Call Chain = __rt_entry_main &rArr; main &rArr; main_Cpp &rArr; BLDCDriver3PWM::init() &rArr; SEGGER_Printf_Float &rArr; SEGGER_RTT_printf &rArr; SEGGER_RTT_vprintf &rArr; _PrintUnsigned &rArr; _StoreChar &rArr; SEGGER_RTT_Write &rArr; SEGGER_RTT_WriteNoLock &rArr; _WriteBlocking
 </UL>
 <BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -580,7 +580,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sputc
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
 </UL>
-<BR>[Called By]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Printf
+<BR>[Called By]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Printf
 </UL>
 
 <P><STRONG><a name="[9c]"></a>__2sprintf</STRONG> (Thumb, 38 bytes, Stack size 32 bytes, __2sprintf.o(.text))
@@ -590,7 +590,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sputc
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_Printf_Float
+<BR>[Called By]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_Printf_Float
 </UL>
 
 <P><STRONG><a name="[ab]"></a>_printf_pre_padding</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, _printf_pad.o(.text))
@@ -698,15 +698,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
 </UL>
 
-<P><STRONG><a name="[12d]"></a>strlen</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, strlen.o(.text))
+<P><STRONG><a name="[12c]"></a>strlen</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, strlen.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strlen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SendString
+<BR>[Called By]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SendString
 </UL>
 
-<P><STRONG><a name="[132]"></a>__aeabi_memcpy</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memcpy_v6.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WriteNoCheck
-<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WriteBlocking
+<P><STRONG><a name="[131]"></a>__aeabi_memcpy</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memcpy_v6.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WriteNoCheck
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WriteBlocking
 </UL>
 
 <P><STRONG><a name="[a5]"></a>__rt_memcpy</STRONG> (Thumb, 138 bytes, Stack size 0 bytes, rt_memcpy_v6.o(.text), UNUSED)
@@ -715,15 +715,15 @@ Global Symbols
 
 <P><STRONG><a name="[1bb]"></a>_memcpy_lastbytes</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memcpy_v6.o(.text), UNUSED)
 
-<P><STRONG><a name="[118]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text))
+<P><STRONG><a name="[117]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_Printf_Float
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
-<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DoInit
-<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::FOCMotor__sub_object()
-<LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::AS5600_I2C(AS5600_I2CConfig_s)
+<BR>[Called By]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_Printf_Float
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DoInit
+<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::FOCMotor__sub_object()
+<LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::AS5600_I2C(AS5600_I2CConfig_s)
 </UL>
 
 <P><STRONG><a name="[1bc]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
@@ -753,7 +753,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fmodf
+<BR>[Called By]<UL><LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fmodf
 </UL>
 
 <P><STRONG><a name="[9d]"></a>_printf_truncate_signed</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, _printf_truncate.o(.text))
@@ -863,7 +863,7 @@ Global Symbols
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_SIGABRT
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort_message
+<BR>[Called By]<UL><LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort_message
 </UL>
 
 <P><STRONG><a name="[a6]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
@@ -1092,7 +1092,7 @@ Global Symbols
 <LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_GetValue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::getPhaseCurrents()
-<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::calibrateOffsets()
+<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::calibrateOffsets()
 </UL>
 
 <P><STRONG><a name="[4]"></a>BusFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f1xx_it.o(.text.BusFault_Handler))
@@ -1115,7 +1115,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DWT_Timer_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
+<BR>[Called By]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
 </UL>
 
 <P><STRONG><a name="[cf]"></a>DWT_Timer_Init</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, dwt_timer.o(.text.DWT_Timer_Init))
@@ -1130,13 +1130,13 @@ Global Symbols
 <P><STRONG><a name="[7]"></a>DebugMon_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f1xx_it.o(.text.DebugMon_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(RESET)
 </UL>
-<P><STRONG><a name="[113]"></a>Error_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, main.o(.text.Error_Handler))
-<BR><BR>[Called By]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
-<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM4_Init
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_I2C2_Init
-<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_I2C1_Init
-<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
+<P><STRONG><a name="[112]"></a>Error_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, main.o(.text.Error_Handler))
+<BR><BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM4_Init
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
+<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_I2C2_Init
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_I2C1_Init
+<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
 </UL>
 
 <P><STRONG><a name="[d2]"></a>HAL_ADCEx_Calibration_Start</STRONG> (Thumb, 212 bytes, Stack size 24 bytes, stm32f1xx_hal_adc_ex.o(.text.HAL_ADCEx_Calibration_Start))
@@ -1147,13 +1147,13 @@ Global Symbols
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Enable
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_ConversionStop_Disable
 </UL>
-<BR>[Called By]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
+<BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
 </UL>
 
-<P><STRONG><a name="[114]"></a>HAL_ADC_ConfigChannel</STRONG> (Thumb, 264 bytes, Stack size 20 bytes, stm32f1xx_hal_adc.o(.text.HAL_ADC_ConfigChannel))
+<P><STRONG><a name="[113]"></a>HAL_ADC_ConfigChannel</STRONG> (Thumb, 264 bytes, Stack size 20 bytes, stm32f1xx_hal_adc.o(.text.HAL_ADC_ConfigChannel))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = HAL_ADC_ConfigChannel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
+<BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
 </UL>
 
 <P><STRONG><a name="[cd]"></a>HAL_ADC_GetValue</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f1xx_hal_adc.o(.text.HAL_ADC_GetValue))
@@ -1166,7 +1166,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_ConversionStop_Disable
 </UL>
-<BR>[Called By]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
+<BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
 </UL>
 
 <P><STRONG><a name="[d5]"></a>HAL_ADC_MspInit</STRONG> (Thumb, 92 bytes, Stack size 32 bytes, adc.o(.text.HAL_ADC_MspInit))
@@ -1217,7 +1217,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
+<BR>[Called By]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_delay(unsigned long)
 </UL>
 
@@ -1232,7 +1232,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> gpio.o(.text.MX_GPIO_Init)
 </UL>
 <P><STRONG><a name="[3c]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f1xx_hal_gpio.o(.text.HAL_GPIO_WritePin))
-<BR><BR>[Called By]<UL><LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SendString
+<BR><BR>[Called By]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SendString
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCDriver3PWM::disable()
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCDriver3PWM::enable()
 </UL>
@@ -1247,13 +1247,12 @@ Global Symbols
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Enable
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_ConversionStop_Disable
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 <LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Read
-<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnTXEFlagUntilTimeout
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnTXEFlagUntilTimeout
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnRXNEFlagUntilTimeout
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnMasterAddressFlagUntilTimeout
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnMasterAddressFlagUntilTimeout
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnFlagUntilTimeout
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive
 <LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
 </UL>
 
@@ -1263,8 +1262,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MspInit
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetPCLK1Freq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_I2C2_Init
-<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_I2C1_Init
+<BR>[Called By]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_I2C2_Init
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_I2C1_Init
 </UL>
 
 <P><STRONG><a name="[da]"></a>HAL_I2C_Mem_Read</STRONG> (Thumb, 688 bytes, Stack size 56 bytes, stm32f1xx_hal_i2c.o(.text.HAL_I2C_Mem_Read))
@@ -1275,11 +1274,11 @@ Global Symbols
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnFlagUntilTimeout
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_RequestMemoryRead
 </UL>
-<BR>[Called By]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::readOut(unsigned char)
-<LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::read(unsigned char)
+<BR>[Called By]<UL><LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::readOut(unsigned char)
+<LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::read(unsigned char)
 </UL>
 
-<P><STRONG><a name="[d8]"></a>HAL_I2C_MspInit</STRONG> (Thumb, 188 bytes, Stack size 32 bytes, i2c.o(.text.HAL_I2C_MspInit))
+<P><STRONG><a name="[d8]"></a>HAL_I2C_MspInit</STRONG> (Thumb, 164 bytes, Stack size 32 bytes, i2c.o(.text.HAL_I2C_MspInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = HAL_I2C_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
@@ -1287,7 +1286,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Init
 </UL>
 
-<P><STRONG><a name="[128]"></a>HAL_IncTick</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f1xx_hal.o(.text.HAL_IncTick))
+<P><STRONG><a name="[127]"></a>HAL_IncTick</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f1xx_hal.o(.text.HAL_IncTick))
 <BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
@@ -1350,7 +1349,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
 <P><STRONG><a name="[e7]"></a>HAL_RCC_ClockConfig</STRONG> (Thumb, 324 bytes, Stack size 32 bytes, stm32f1xx_hal_rcc.o(.text.HAL_RCC_ClockConfig))
@@ -1360,7 +1359,7 @@ Global Symbols
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
 <P><STRONG><a name="[d9]"></a>HAL_RCC_GetPCLK1Freq</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, stm32f1xx_hal_rcc.o(.text.HAL_RCC_GetPCLK1Freq))
@@ -1385,7 +1384,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
 <P><STRONG><a name="[e2]"></a>HAL_SYSTICK_Config</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, stm32f1xx_hal_cortex.o(.text.HAL_SYSTICK_Config))
@@ -1400,11 +1399,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
 </UL>
 
-<P><STRONG><a name="[119]"></a>HAL_TIMEx_MasterConfigSynchronization</STRONG> (Thumb, 108 bytes, Stack size 8 bytes, stm32f1xx_hal_tim_ex.o(.text.HAL_TIMEx_MasterConfigSynchronization))
+<P><STRONG><a name="[118]"></a>HAL_TIMEx_MasterConfigSynchronization</STRONG> (Thumb, 108 bytes, Stack size 8 bytes, stm32f1xx_hal_tim_ex.o(.text.HAL_TIMEx_MasterConfigSynchronization))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_TIMEx_MasterConfigSynchronization
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM4_Init
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
+<BR>[Called By]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM4_Init
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
 </UL>
 
 <P><STRONG><a name="[e9]"></a>HAL_TIM_Base_Init</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, stm32f1xx_hal_tim.o(.text.HAL_TIM_Base_Init))
@@ -1413,8 +1412,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_MspInit
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_SetConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM4_Init
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
+<BR>[Called By]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM4_Init
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
 </UL>
 
 <P><STRONG><a name="[ea]"></a>HAL_TIM_Base_MspInit</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, tim.o(.text.HAL_TIM_Base_MspInit))
@@ -1426,14 +1425,18 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
 </UL>
 
+<P><STRONG><a name="[169]"></a>HAL_TIM_Base_Start_IT</STRONG> (Thumb, 88 bytes, Stack size 0 bytes, stm32f1xx_hal_tim.o(.text.HAL_TIM_Base_Start_IT))
+<BR><BR>[Called By]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
+</UL>
+
 <P><STRONG><a name="[ed]"></a>HAL_TIM_ConfigClockSource</STRONG> (Thumb, 248 bytes, Stack size 8 bytes, stm32f1xx_hal_tim.o(.text.HAL_TIM_ConfigClockSource))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_TIM_ConfigClockSource
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TI2_ConfigInputStage
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TI1_ConfigInputStage
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM4_Init
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
+<BR>[Called By]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM4_Init
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
 </UL>
 
 <P><STRONG><a name="[f1]"></a>HAL_TIM_IC_CaptureCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f1xx_hal_tim.o(.text.HAL_TIM_IC_CaptureCallback))
@@ -1461,7 +1464,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
+<BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
 </UL>
 
 <P><STRONG><a name="[f2]"></a>HAL_TIM_OC_DelayElapsedCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f1xx_hal_tim.o(.text.HAL_TIM_OC_DelayElapsedCallback))
@@ -1476,7 +1479,7 @@ Global Symbols
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC1_SetConfig
 <LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC2_SetConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
+<BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
 </UL>
 
 <P><STRONG><a name="[fe]"></a>HAL_TIM_PWM_Init</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, stm32f1xx_hal_tim.o(.text.HAL_TIM_PWM_Init))
@@ -1485,7 +1488,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_SetConfig
 <LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_MspInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
+<BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
 </UL>
 
 <P><STRONG><a name="[ff]"></a>HAL_TIM_PWM_MspInit</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f1xx_hal_tim.o(.text.HAL_TIM_PWM_MspInit))
@@ -1547,7 +1550,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 <LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
+<BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
 </UL>
 
 <P><STRONG><a name="[10a]"></a>HAL_UART_MspInit</STRONG> (Thumb, 136 bytes, Stack size 40 bytes, usart.o(.text.HAL_UART_MspInit))
@@ -1560,26 +1563,17 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 </UL>
 
-<P><STRONG><a name="[10c]"></a>HAL_UART_Receive</STRONG> (Thumb, 186 bytes, Stack size 32 bytes, stm32f1xx_hal_uart.o(.text.HAL_UART_Receive))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = HAL_UART_Receive &rArr; UART_WaitOnFlagUntilTimeout
-</UL>
-<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
-</UL>
-<BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
-</UL>
-
-<P><STRONG><a name="[12c]"></a>HAL_UART_RxCpltCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f1xx_hal_uart.o(.text.HAL_UART_RxCpltCallback))
+<P><STRONG><a name="[12b]"></a>HAL_UART_RxCpltCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f1xx_hal_uart.o(.text.HAL_UART_RxCpltCallback))
 <BR><BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Receive_IT
 </UL>
 
-<P><STRONG><a name="[10e]"></a>HAL_UART_Transmit</STRONG> (Thumb, 170 bytes, Stack size 32 bytes, stm32f1xx_hal_uart.o(.text.HAL_UART_Transmit))
+<P><STRONG><a name="[10c]"></a>HAL_UART_Transmit</STRONG> (Thumb, 170 bytes, Stack size 32 bytes, stm32f1xx_hal_uart.o(.text.HAL_UART_Transmit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Called By]<UL><LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SendString
+<BR>[Called By]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SendString
 </UL>
 
 <P><STRONG><a name="[105]"></a>HAL_UART_TxCpltCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f1xx_hal_uart.o(.text.HAL_UART_TxCpltCallback))
@@ -1593,42 +1587,42 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(RESET)
 </UL>
-<P><STRONG><a name="[112]"></a>MX_ADC1_Init</STRONG> (Thumb, 120 bytes, Stack size 32 bytes, adc.o(.text.MX_ADC1_Init))
+<P><STRONG><a name="[111]"></a>MX_ADC1_Init</STRONG> (Thumb, 120 bytes, Stack size 32 bytes, adc.o(.text.MX_ADC1_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = MX_ADC1_Init &rArr; HAL_ADC_Init &rArr; HAL_ADC_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Init
-<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConfigChannel
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConfigChannel
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADCEx_Calibration_Start
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
+<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[165]"></a>MX_GPIO_Init</STRONG> (Thumb, 216 bytes, Stack size 56 bytes, gpio.o(.text.MX_GPIO_Init))
+<P><STRONG><a name="[164]"></a>MX_GPIO_Init</STRONG> (Thumb, 216 bytes, Stack size 56 bytes, gpio.o(.text.MX_GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = MX_GPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[115]"></a>MX_I2C1_Init</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, i2c.o(.text.MX_I2C1_Init))
+<P><STRONG><a name="[114]"></a>MX_I2C1_Init</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, i2c.o(.text.MX_I2C1_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = MX_I2C1_Init &rArr; HAL_I2C_Init &rArr; HAL_I2C_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Init
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
+<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[116]"></a>MX_I2C2_Init</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, i2c.o(.text.MX_I2C2_Init))
+<P><STRONG><a name="[115]"></a>MX_I2C2_Init</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, i2c.o(.text.MX_I2C2_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = MX_I2C2_Init &rArr; HAL_I2C_Init &rArr; HAL_I2C_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Init
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
+<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[117]"></a>MX_TIM2_Init</STRONG> (Thumb, 192 bytes, Stack size 64 bytes, tim.o(.text.MX_TIM2_Init))
+<P><STRONG><a name="[116]"></a>MX_TIM2_Init</STRONG> (Thumb, 192 bytes, Stack size 64 bytes, tim.o(.text.MX_TIM2_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = MX_TIM2_Init &rArr; HAL_TIM_MspPostInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Init
@@ -1636,28 +1630,28 @@ Global Symbols
 <LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_ConfigClockSource
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
-<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
+<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[11a]"></a>MX_TIM4_Init</STRONG> (Thumb, 104 bytes, Stack size 32 bytes, tim.o(.text.MX_TIM4_Init))
+<P><STRONG><a name="[119]"></a>MX_TIM4_Init</STRONG> (Thumb, 104 bytes, Stack size 32 bytes, tim.o(.text.MX_TIM4_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = MX_TIM4_Init &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority &rArr; __NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_ConfigClockSource
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
+<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[11b]"></a>MX_USART1_UART_Init</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, usart.o(.text.MX_USART1_UART_Init))
+<P><STRONG><a name="[11a]"></a>MX_USART1_UART_Init</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, usart.o(.text.MX_USART1_UART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = MX_USART1_UART_Init &rArr; HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
+<BR>[Calls]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
 <LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -1680,75 +1674,75 @@ Global Symbols
 <P><STRONG><a name="[8]"></a>PendSV_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f1xx_it.o(.text.PendSV_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(RESET)
 </UL>
-<P><STRONG><a name="[11c]"></a>SEGGER_Printf_Float</STRONG> (Thumb, 60 bytes, Stack size 72 bytes, main.o(.text.SEGGER_Printf_Float))
+<P><STRONG><a name="[11b]"></a>SEGGER_Printf_Float</STRONG> (Thumb, 60 bytes, Stack size 72 bytes, main.o(.text.SEGGER_Printf_Float))
 <BR><BR>[Stack]<UL><LI>Max Depth = 360 + Unknown Stack Size
 <LI>Call Chain = SEGGER_Printf_Float &rArr; SEGGER_RTT_printf &rArr; SEGGER_RTT_vprintf &rArr; _PrintUnsigned &rArr; _StoreChar &rArr; SEGGER_RTT_Write &rArr; SEGGER_RTT_WriteNoLock &rArr; _WriteBlocking
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_printf
-<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
-<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_printf
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCDriver3PWM::init()
 </UL>
 
-<P><STRONG><a name="[11f]"></a>SEGGER_RTT_Write</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, segger_rtt.o(.text.SEGGER_RTT_Write))
+<P><STRONG><a name="[11e]"></a>SEGGER_RTT_Write</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, segger_rtt.o(.text.SEGGER_RTT_Write))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = SEGGER_RTT_Write &rArr; SEGGER_RTT_WriteNoLock &rArr; _WriteBlocking
 </UL>
-<BR>[Calls]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DoInit
-<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_WriteNoLock
+<BR>[Calls]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DoInit
+<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_WriteNoLock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_vprintf
-<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_StoreChar
+<BR>[Called By]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_vprintf
+<LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_StoreChar
 </UL>
 
-<P><STRONG><a name="[121]"></a>SEGGER_RTT_WriteNoLock</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, segger_rtt.o(.text.SEGGER_RTT_WriteNoLock))
+<P><STRONG><a name="[120]"></a>SEGGER_RTT_WriteNoLock</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, segger_rtt.o(.text.SEGGER_RTT_WriteNoLock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = SEGGER_RTT_WriteNoLock &rArr; _WriteBlocking
 </UL>
-<BR>[Calls]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WriteNoCheck
-<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WriteBlocking
-<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetAvailWriteSpace
+<BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WriteNoCheck
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WriteBlocking
+<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetAvailWriteSpace
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_Write
+<BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_Write
 </UL>
 
-<P><STRONG><a name="[11e]"></a>SEGGER_RTT_printf</STRONG> (Thumb, 26 bytes, Stack size 24 bytes, segger_rtt_printf.o(.text.SEGGER_RTT_printf))
+<P><STRONG><a name="[11d]"></a>SEGGER_RTT_printf</STRONG> (Thumb, 26 bytes, Stack size 24 bytes, segger_rtt_printf.o(.text.SEGGER_RTT_printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 288<LI>Call Chain = SEGGER_RTT_printf &rArr; SEGGER_RTT_vprintf &rArr; _PrintUnsigned &rArr; _StoreChar &rArr; SEGGER_RTT_Write &rArr; SEGGER_RTT_WriteNoLock &rArr; _WriteBlocking
 </UL>
-<BR>[Calls]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_vprintf
+<BR>[Calls]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_vprintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_Printf_Float
+<BR>[Called By]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_Printf_Float
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCDriver3PWM::disable()
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCDriver3PWM::enable()
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCDriver3PWM::init()
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::driverAlign(float)
 </UL>
 
-<P><STRONG><a name="[125]"></a>SEGGER_RTT_vprintf</STRONG> (Thumb, 724 bytes, Stack size 144 bytes, segger_rtt_printf.o(.text.SEGGER_RTT_vprintf))
+<P><STRONG><a name="[124]"></a>SEGGER_RTT_vprintf</STRONG> (Thumb, 724 bytes, Stack size 144 bytes, segger_rtt_printf.o(.text.SEGGER_RTT_vprintf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = SEGGER_RTT_vprintf &rArr; _PrintUnsigned &rArr; _StoreChar &rArr; SEGGER_RTT_Write &rArr; SEGGER_RTT_WriteNoLock &rArr; _WriteBlocking
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_Write
-<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_StoreChar
-<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_PrintUnsigned
+<BR>[Calls]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_Write
+<LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_StoreChar
+<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_PrintUnsigned
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_printf
+<BR>[Called By]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_printf
 </UL>
 
 <P><STRONG><a name="[6]"></a>SVC_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f1xx_it.o(.text.SVC_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(RESET)
 </UL>
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f1xx_it.o(.text.SysTick_Handler))
-<BR><BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
+<BR><BR>[Calls]<UL><LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(RESET)
 </UL>
-<P><STRONG><a name="[129]"></a>SystemClock_Config</STRONG> (Thumb, 136 bytes, Stack size 96 bytes, main.o(.text.SystemClock_Config))
+<P><STRONG><a name="[128]"></a>SystemClock_Config</STRONG> (Thumb, 136 bytes, Stack size 96 bytes, main.o(.text.SystemClock_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority &rArr; __NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCCEx_PeriphCLKConfig
-<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1789,29 +1783,29 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
 </UL>
 
-<P><STRONG><a name="[12a]"></a>UART_Printf</STRONG> (Thumb, 44 bytes, Stack size 152 bytes, usart.o(.text.UART_Printf))
+<P><STRONG><a name="[129]"></a>UART_Printf</STRONG> (Thumb, 44 bytes, Stack size 152 bytes, usart.o(.text.UART_Printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 280 + Unknown Stack Size
 <LI>Call Chain = UART_Printf &rArr; vsnprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SendString
+<BR>[Calls]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SendString
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vsnprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::loopFOC()
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::initFOC()
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::init()
-<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::absoluteZeroSearch()
-<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignCurrentSense()
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::absoluteZeroSearch()
+<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignCurrentSense()
+<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
 </UL>
 
-<P><STRONG><a name="[12b]"></a>UART_SendString</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, usart.o(.text.UART_SendString))
+<P><STRONG><a name="[12a]"></a>UART_SendString</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, usart.o(.text.UART_SendString))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = UART_SendString &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
-<LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
+<LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Printf
+<BR>[Called By]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Printf
 </UL>
 
 <P><STRONG><a name="[2f]"></a>USART1_IRQHandler</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f1xx_it.o(.text.USART1_IRQHandler))
@@ -1828,58 +1822,58 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(RESET)
 </UL>
-<P><STRONG><a name="[133]"></a>_sqrtApprox(float)</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, foc_utils.o(.text._Z11_sqrtApproxf))
+<P><STRONG><a name="[132]"></a>_sqrtApprox(float)</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, foc_utils.o(.text._Z11_sqrtApproxf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = _sqrtApprox(float) &rArr; __aeabi_fmul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<BR>[Calls]<UL><LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
 </UL>
 <BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getDCCurrent(float)
 </UL>
 
-<P><STRONG><a name="[135]"></a>_normalizeAngle(float)</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, foc_utils.o(.text._Z15_normalizeAnglef))
+<P><STRONG><a name="[134]"></a>_normalizeAngle(float)</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, foc_utils.o(.text._Z15_normalizeAnglef))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = _normalizeAngle(float) &rArr; fmodf &rArr; _frem &rArr; __fpl_fnaninf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpge
-<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
-<LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fmodf
+<BR>[Calls]<UL><LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpge
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fmodf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::electricalAngle()
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
+<BR>[Called By]<UL><LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::electricalAngle()
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::setPhaseVoltage(float, float, float)
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
 </UL>
 
-<P><STRONG><a name="[139]"></a>_electricalAngle(float, int)</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, foc_utils.o(.text._Z16_electricalAnglefi))
+<P><STRONG><a name="[138]"></a>_electricalAngle(float, int)</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, foc_utils.o(.text._Z16_electricalAnglefi))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = _electricalAngle(float, int) &rArr; __aeabi_fmul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<BR>[Calls]<UL><LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 </UL>
-<BR>[Called By]<UL><LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
+<BR>[Called By]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
 </UL>
 
-<P><STRONG><a name="[13b]"></a>_cos(float)</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, foc_utils.o(.text._Z4_cosf))
+<P><STRONG><a name="[13a]"></a>_cos(float)</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, foc_utils.o(.text._Z4_cosf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = _cos(float) &rArr; _sin(float) &rArr; __aeabi_dmul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sin(float)
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
-<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<BR>[Calls]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sin(float)
+<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sincos(float, float*, float*)
+<BR>[Called By]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sincos(float, float*, float*)
 </UL>
 
-<P><STRONG><a name="[13d]"></a>_sin(float)</STRONG> (Thumb, 144 bytes, Stack size 8 bytes, foc_utils.o(.text._Z4_sinf))
+<P><STRONG><a name="[13c]"></a>_sin(float)</STRONG> (Thumb, 144 bytes, Stack size 8 bytes, foc_utils.o(.text._Z4_sinf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = _sin(float) &rArr; __aeabi_dmul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
-<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
-<LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<BR>[Calls]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 </UL>
-<BR>[Called By]<UL><LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sincos(float, float*, float*)
-<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cos(float)
+<BR>[Called By]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sincos(float, float*, float*)
+<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cos(float)
 </UL>
 
 <P><STRONG><a name="[41]"></a>_delay(unsigned long)</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, time_utils.o(.text._Z6_delaym))
@@ -1890,51 +1884,51 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::init()
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::initFOC()
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::init()
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
-<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::calibrateOffsets()
+<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
+<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::calibrateOffsets()
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::driverAlign(float)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> bldcmotor.o(.text._ZN9BLDCMotor11alignSensorEv)
 </UL>
-<P><STRONG><a name="[140]"></a>_micros()</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, time_utils.o(.text._Z7_microsv))
+<P><STRONG><a name="[13f]"></a>_micros()</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, time_utils.o(.text._Z7_microsv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = _micros() &rArr; DWT_Get_Microsecond &rArr; DWT_Timer_Init &rArr; HAL_RCC_GetSysClockFreq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DWT_Get_Microsecond
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
+<BR>[Called By]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
 <LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::PIDController(float, float, float, float, float)
-<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
+<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
 <LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::LowPassFilter(float)
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::Outupdate()
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::update()
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::init()
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
 </UL>
 
-<P><STRONG><a name="[141]"></a>_sincos(float, float*, float*)</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, foc_utils.o(.text._Z7_sincosfPfS_))
+<P><STRONG><a name="[140]"></a>_sincos(float, float*, float*)</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, foc_utils.o(.text._Z7_sincosfPfS_))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = _sincos(float, float*, float*) &rArr; _cos(float) &rArr; _sin(float) &rArr; __aeabi_dmul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sin(float)
-<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cos(float)
+<BR>[Calls]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sin(float)
+<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cos(float)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getFOCCurrents(float)
+<BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getFOCCurrents(float)
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getDCCurrent(float)
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::setPhaseVoltage(float, float, float)
 </UL>
 
-<P><STRONG><a name="[142]"></a>AS5600_I2C::getRawCount()</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, as5600_i2c.o(.text._ZN10AS5600_I2C11getRawCountEv))
+<P><STRONG><a name="[141]"></a>AS5600_I2C::getRawCount()</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, as5600_i2c.o(.text._ZN10AS5600_I2C11getRawCountEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = AS5600_I2C::getRawCount() &rArr; AS5600_I2C::read(unsigned char) &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::read(unsigned char)
+<BR>[Calls]<UL><LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::read(unsigned char)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::getSensorAngle()
 </UL>
 
-<P><STRONG><a name="[144]"></a>AS5600_I2C::getOutRawCount()</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, as5600_i2c.o(.text._ZN10AS5600_I2C14getOutRawCountEv))
+<P><STRONG><a name="[143]"></a>AS5600_I2C::getOutRawCount()</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, as5600_i2c.o(.text._ZN10AS5600_I2C14getOutRawCountEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = AS5600_I2C::getOutRawCount() &rArr; AS5600_I2C::readOut(unsigned char) &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::readOut(unsigned char)
+<BR>[Calls]<UL><LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::readOut(unsigned char)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::getOutSensorAngle()
 </UL>
@@ -1942,83 +1936,83 @@ Global Symbols
 <P><STRONG><a name="[4c]"></a>AS5600_I2C::getSensorAngle()</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, as5600_i2c.o(.text._ZN10AS5600_I2C14getSensorAngleEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = AS5600_I2C::getSensorAngle() &rArr; AS5600_I2C::getRawCount() &rArr; AS5600_I2C::read(unsigned char) &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::getRawCount()
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<BR>[Calls]<UL><LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::getRawCount()
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> as5600_i2c.o(.rodata._ZTV10AS5600_I2C)
 </UL>
 <P><STRONG><a name="[4d]"></a>AS5600_I2C::getOutSensorAngle()</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, as5600_i2c.o(.text._ZN10AS5600_I2C17getOutSensorAngleEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = AS5600_I2C::getOutSensorAngle() &rArr; AS5600_I2C::getOutRawCount() &rArr; AS5600_I2C::readOut(unsigned char) &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::getOutRawCount()
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<BR>[Calls]<UL><LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::getOutRawCount()
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> as5600_i2c.o(.rodata._ZTV10AS5600_I2C)
 </UL>
-<P><STRONG><a name="[147]"></a>AS5600_I2C::init(I2C_HandleTypeDef*, I2C_HandleTypeDef*)</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, as5600_i2c.o(.text._ZN10AS5600_I2C4initEP17I2C_HandleTypeDefS1_))
+<P><STRONG><a name="[146]"></a>AS5600_I2C::init(I2C_HandleTypeDef*, I2C_HandleTypeDef*)</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, as5600_i2c.o(.text._ZN10AS5600_I2C4initEP17I2C_HandleTypeDefS1_))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = AS5600_I2C::init(I2C_HandleTypeDef*, I2C_HandleTypeDef*) &rArr; Sensor::init() &rArr; _micros() &rArr; DWT_Get_Microsecond &rArr; DWT_Timer_Init &rArr; HAL_RCC_GetSysClockFreq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::init()
 </UL>
-<BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
+<BR>[Called By]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
 </UL>
 
-<P><STRONG><a name="[143]"></a>AS5600_I2C::read(unsigned char)</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, as5600_i2c.o(.text._ZN10AS5600_I2C4readEh))
+<P><STRONG><a name="[142]"></a>AS5600_I2C::read(unsigned char)</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, as5600_i2c.o(.text._ZN10AS5600_I2C4readEh))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = AS5600_I2C::read(unsigned char) &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::getRawCount()
+<BR>[Called By]<UL><LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::getRawCount()
 </UL>
 
-<P><STRONG><a name="[145]"></a>AS5600_I2C::readOut(unsigned char)</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, as5600_i2c.o(.text._ZN10AS5600_I2C7readOutEh))
+<P><STRONG><a name="[144]"></a>AS5600_I2C::readOut(unsigned char)</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, as5600_i2c.o(.text._ZN10AS5600_I2C7readOutEh))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = AS5600_I2C::readOut(unsigned char) &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::getOutRawCount()
+<BR>[Called By]<UL><LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::getOutRawCount()
 </UL>
 
-<P><STRONG><a name="[12e]"></a>AS5600_I2C::AS5600_I2C(AS5600_I2CConfig_s)</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, as5600_i2c.o(.text._ZN10AS5600_I2CC2E18AS5600_I2CConfig_s))
+<P><STRONG><a name="[12d]"></a>AS5600_I2C::AS5600_I2C(AS5600_I2CConfig_s)</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, as5600_i2c.o(.text._ZN10AS5600_I2CC2E18AS5600_I2CConfig_s))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = AS5600_I2C::AS5600_I2C(AS5600_I2CConfig_s) &rArr; __aeabi_memclr4
 </UL>
-<BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<BR>[Calls]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 </UL>
 <BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GLOBAL__sub_I_user_main.cpp
 </UL>
 
 <P><STRONG><a name="[1cc]"></a>AS5600_I2C::AS5600_I2C__sub_object(AS5600_I2CConfig_s)</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, as5600_i2c.o(.text._ZN10AS5600_I2CC2E18AS5600_I2CConfig_s), UNUSED)
 
-<P><STRONG><a name="[167]"></a>CurrentSense::linkDriver(BLDCDriver*)</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, currentsense.o(.text._ZN12CurrentSense10linkDriverEP10BLDCDriver))
-<BR><BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
+<P><STRONG><a name="[166]"></a>CurrentSense::linkDriver(BLDCDriver*)</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, currentsense.o(.text._ZN12CurrentSense10linkDriverEP10BLDCDriver))
+<BR><BR>[Called By]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
 </UL>
 
 <P><STRONG><a name="[57]"></a>CurrentSense::getDCCurrent(float)</STRONG> (Thumb, 320 bytes, Stack size 48 bytes, currentsense.o(.text._ZN12CurrentSense12getDCCurrentEf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = CurrentSense::getDCCurrent(float) &rArr; _sincos(float, float*, float*) &rArr; _cos(float) &rArr; _sin(float) &rArr; __aeabi_dmul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sincos(float, float*, float*)
-<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sqrtApprox(float)
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
-<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<BR>[Calls]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sincos(float, float*, float*)
+<LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sqrtApprox(float)
+<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
+<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> inlinecurrentsense.o(.rodata._ZTV18InlineCurrentSense)
 </UL>
-<P><STRONG><a name="[14a]"></a>CurrentSense::getFOCCurrents(float)</STRONG> (Thumb, 284 bytes, Stack size 56 bytes, currentsense.o(.text._ZN12CurrentSense14getFOCCurrentsEf))
+<P><STRONG><a name="[149]"></a>CurrentSense::getFOCCurrents(float)</STRONG> (Thumb, 284 bytes, Stack size 56 bytes, currentsense.o(.text._ZN12CurrentSense14getFOCCurrentsEf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = CurrentSense::getFOCCurrents(float) &rArr; _sincos(float, float*, float*) &rArr; _cos(float) &rArr; _sin(float) &rArr; __aeabi_dmul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sincos(float, float*, float*)
-<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<BR>[Calls]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sincos(float, float*, float*)
+<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::loopFOC()
 </UL>
@@ -2026,51 +2020,51 @@ Global Symbols
 <P><STRONG><a name="[40]"></a>LowPassFilter::LowPassFilter(float)</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, lowpass_filter.o(.text._ZN13LowPassFilterC2Ef))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = LowPassFilter::LowPassFilter(float) &rArr; _micros() &rArr; DWT_Get_Microsecond &rArr; DWT_Timer_Init &rArr; HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
+<BR>[Calls]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> focmotor.o(.text._ZN8FOCMotorC2Ev)
 </UL>
 <P><STRONG><a name="[1cd]"></a>LowPassFilter::LowPassFilter__sub_object(float)</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, lowpass_filter.o(.text._ZN13LowPassFilterC2Ef), UNUSED)
 
-<P><STRONG><a name="[14b]"></a>LowPassFilter::operator ()(float)</STRONG> (Thumb, 128 bytes, Stack size 32 bytes, lowpass_filter.o(.text._ZN13LowPassFilterclEf))
+<P><STRONG><a name="[14a]"></a>LowPassFilter::operator ()(float)</STRONG> (Thumb, 128 bytes, Stack size 32 bytes, lowpass_filter.o(.text._ZN13LowPassFilterclEf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = LowPassFilter::operator ()(float) &rArr; _micros() &rArr; DWT_Get_Microsecond &rArr; DWT_Timer_Init &rArr; HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
+<BR>[Calls]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
 </UL>
-<BR>[Called By]<UL><LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftVelocityOut()
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngleOut()
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngle()
+<BR>[Called By]<UL><LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftVelocityOut()
+<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngleOut()
+<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngle()
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::loopFOC()
 </UL>
 
 <P><STRONG><a name="[3f]"></a>PIDController::PIDController(float, float, float, float, float)</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, pid.o(.text._ZN13PIDControllerC2Efffff))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = PIDController::PIDController(float, float, float, float, float) &rArr; _micros() &rArr; DWT_Get_Microsecond &rArr; DWT_Timer_Init &rArr; HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
+<BR>[Calls]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> focmotor.o(.text._ZN8FOCMotorC2Ev)
 </UL>
 <P><STRONG><a name="[1ce]"></a>PIDController::PIDController__sub_object(float, float, float, float, float)</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, pid.o(.text._ZN13PIDControllerC2Efffff), UNUSED)
 
-<P><STRONG><a name="[14e]"></a>PIDController::operator ()(float)</STRONG> (Thumb, 408 bytes, Stack size 56 bytes, pid.o(.text._ZN13PIDControllerclEf))
+<P><STRONG><a name="[14d]"></a>PIDController::operator ()(float)</STRONG> (Thumb, 408 bytes, Stack size 56 bytes, pid.o(.text._ZN13PIDControllerclEf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = PIDController::operator ()(float) &rArr; _micros() &rArr; DWT_Get_Microsecond &rArr; DWT_Timer_Init &rArr; HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmplt
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
-<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpge
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
+<BR>[Calls]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmplt
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
+<LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpge
+<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::loopFOC()
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::move(float)
@@ -2083,12 +2077,12 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 384 + Unknown Stack Size
 <LI>Call Chain = BLDCDriver3PWM::init() &rArr; SEGGER_Printf_Float &rArr; SEGGER_RTT_printf &rArr; SEGGER_RTT_vprintf &rArr; _PrintUnsigned &rArr; _StoreChar &rArr; SEGGER_RTT_Write &rArr; SEGGER_RTT_WriteNoLock &rArr; _WriteBlocking
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_printf
-<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_Printf_Float
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
-<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
+<BR>[Calls]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_printf
+<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_Printf_Float
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
+<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
+<BR>[Called By]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> bldcdriver3pwm.o(.rodata._ZTV14BLDCDriver3PWM)
 </UL>
@@ -2096,17 +2090,17 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 296<LI>Call Chain = BLDCDriver3PWM::enable() &rArr; SEGGER_RTT_printf &rArr; SEGGER_RTT_vprintf &rArr; _PrintUnsigned &rArr; _StoreChar &rArr; SEGGER_RTT_Write &rArr; SEGGER_RTT_WriteNoLock &rArr; _WriteBlocking
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_printf
+<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> bldcdriver3pwm.o(.rodata._ZTV14BLDCDriver3PWM)
 </UL>
 <P><STRONG><a name="[52]"></a>BLDCDriver3PWM::setPwm(float, float, float)</STRONG> (Thumb, 248 bytes, Stack size 32 bytes, bldcdriver3pwm.o(.text._ZN14BLDCDriver3PWM6setPwmEfff))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = BLDCDriver3PWM::setPwm(float, float, float) &rArr; _writeDutyCycle3PWM &rArr; __aeabi_f2uiz
 </UL>
-<BR>[Calls]<UL><LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_writeDutyCycle3PWM
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmplt
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
+<BR>[Calls]<UL><LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_writeDutyCycle3PWM
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmplt
+<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> bldcdriver3pwm.o(.rodata._ZTV14BLDCDriver3PWM)
 </UL>
@@ -2114,11 +2108,11 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 296<LI>Call Chain = BLDCDriver3PWM::disable() &rArr; SEGGER_RTT_printf &rArr; SEGGER_RTT_vprintf &rArr; _PrintUnsigned &rArr; _StoreChar &rArr; SEGGER_RTT_Write &rArr; SEGGER_RTT_WriteNoLock &rArr; _WriteBlocking
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_printf
+<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> bldcdriver3pwm.o(.rodata._ZTV14BLDCDriver3PWM)
 </UL>
-<P><STRONG><a name="[12f]"></a>BLDCDriver3PWM::BLDCDriver3PWM(int, int, int, int, int, int)</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, bldcdriver3pwm.o(.text._ZN14BLDCDriver3PWMC2Eiiiiii))
+<P><STRONG><a name="[12e]"></a>BLDCDriver3PWM::BLDCDriver3PWM(int, int, int, int, int, int)</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, bldcdriver3pwm.o(.text._ZN14BLDCDriver3PWMC2Eiiiiii))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BLDCDriver3PWM::BLDCDriver3PWM(int, int, int, int, int, int)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GLOBAL__sub_I_user_main.cpp
@@ -2129,31 +2123,31 @@ Global Symbols
 <P><STRONG><a name="[55]"></a>InlineCurrentSense::driverAlign(float)</STRONG> (Thumb, 1856 bytes, Stack size 88 bytes, inlinecurrentsense.o(.text._ZN18InlineCurrentSense11driverAlignEf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 376<LI>Call Chain = InlineCurrentSense::driverAlign(float) &rArr; SEGGER_RTT_printf &rArr; SEGGER_RTT_vprintf &rArr; _PrintUnsigned &rArr; _StoreChar &rArr; SEGGER_RTT_Write &rArr; SEGGER_RTT_WriteNoLock &rArr; _WriteBlocking
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_printf
+<BR>[Calls]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_printf
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_delay(unsigned long)
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmplt
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
-<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpge
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
-<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
-<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
-<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
-<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
-<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
-<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmplt
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
+<LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpge
+<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
+<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> inlinecurrentsense.o(.rodata._ZTV18InlineCurrentSense)
 </UL>
-<P><STRONG><a name="[153]"></a>InlineCurrentSense::calibrateOffsets()</STRONG> (Thumb, 184 bytes, Stack size 32 bytes, inlinecurrentsense.o(.text._ZN18InlineCurrentSense16calibrateOffsetsEv))
+<P><STRONG><a name="[152]"></a>InlineCurrentSense::calibrateOffsets()</STRONG> (Thumb, 184 bytes, Stack size 32 bytes, inlinecurrentsense.o(.text._ZN18InlineCurrentSense16calibrateOffsetsEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = InlineCurrentSense::calibrateOffsets() &rArr; ADC_StartReadVoltageFromChannels &rArr; HAL_ADC_Start &rArr; ADC_Enable
 </UL>
-<BR>[Calls]<UL><LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_readADCVoltageInline
+<BR>[Calls]<UL><LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_readADCVoltageInline
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_StartReadVoltageFromChannels
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_delay(unsigned long)
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::init()
 </UL>
@@ -2161,27 +2155,27 @@ Global Symbols
 <P><STRONG><a name="[56]"></a>InlineCurrentSense::getPhaseCurrents()</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, inlinecurrentsense.o(.text._ZN18InlineCurrentSense16getPhaseCurrentsEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = InlineCurrentSense::getPhaseCurrents() &rArr; ADC_StartReadVoltageFromChannels &rArr; HAL_ADC_Start &rArr; ADC_Enable
 </UL>
-<BR>[Calls]<UL><LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_readADCVoltageInline
+<BR>[Calls]<UL><LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_readADCVoltageInline
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_StartReadVoltageFromChannels
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> inlinecurrentsense.o(.rodata._ZTV18InlineCurrentSense)
 </UL>
 <P><STRONG><a name="[54]"></a>InlineCurrentSense::init()</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, inlinecurrentsense.o(.text._ZN18InlineCurrentSense4initEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = InlineCurrentSense::init() &rArr; InlineCurrentSense::calibrateOffsets() &rArr; ADC_StartReadVoltageFromChannels &rArr; HAL_ADC_Start &rArr; ADC_Enable
 </UL>
-<BR>[Calls]<UL><LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::calibrateOffsets()
+<BR>[Calls]<UL><LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::calibrateOffsets()
 </UL>
-<BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
+<BR>[Called By]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> inlinecurrentsense.o(.rodata._ZTV18InlineCurrentSense)
 </UL>
-<P><STRONG><a name="[131]"></a>InlineCurrentSense::InlineCurrentSense(float, float, int, int, int)</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, inlinecurrentsense.o(.text._ZN18InlineCurrentSenseC2Effiii))
+<P><STRONG><a name="[130]"></a>InlineCurrentSense::InlineCurrentSense(float, float, int, int, int)</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, inlinecurrentsense.o(.text._ZN18InlineCurrentSenseC2Effiii))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = InlineCurrentSense::InlineCurrentSense(float, float, int, int, int) &rArr; __aeabi_fdiv
 </UL>
-<BR>[Calls]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<BR>[Calls]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
 </UL>
 <BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GLOBAL__sub_I_user_main.cpp
 </UL>
@@ -2191,25 +2185,25 @@ Global Symbols
 <P><STRONG><a name="[44]"></a>Sensor::getOutAngle()</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, sensor.o(.text._ZN6Sensor11getOutAngleEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Sensor::getOutAngle() &rArr; __aeabi_fadd
 </UL>
-<BR>[Calls]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<BR>[Calls]<UL><LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> as5600_i2c.o(.rodata._ZTV10AS5600_I2C)
 </UL>
 <P><STRONG><a name="[46]"></a>Sensor::getVelocity()</STRONG> (Thumb, 136 bytes, Stack size 24 bytes, sensor.o(.text._ZN6Sensor11getVelocityEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = Sensor::getVelocity() &rArr; __aeabi_dmul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
-<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpge
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
-<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
-<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
-<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<BR>[Calls]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
+<LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpge
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
+<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> as5600_i2c.o(.rodata._ZTV10AS5600_I2C)
 </UL>
@@ -2219,25 +2213,25 @@ Global Symbols
 <P><STRONG><a name="[47]"></a>Sensor::getVelocityOut()</STRONG> (Thumb, 120 bytes, Stack size 32 bytes, sensor.o(.text._ZN6Sensor14getVelocityOutEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = Sensor::getVelocityOut() &rArr; __aeabi_dmul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
-<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
-<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
-<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<BR>[Calls]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
+<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> as5600_i2c.o(.rodata._ZTV10AS5600_I2C)
 </UL>
 <P><STRONG><a name="[45]"></a>Sensor::getPreciseAngle()</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, sensor.o(.text._ZN6Sensor15getPreciseAngleEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = Sensor::getPreciseAngle() &rArr; __aeabi_dmul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
-<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
-<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
-<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<BR>[Calls]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
+<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> as5600_i2c.o(.rodata._ZTV10AS5600_I2C)
 </UL>
@@ -2250,239 +2244,238 @@ Global Symbols
 <P><STRONG><a name="[4e]"></a>Sensor::init()</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, sensor.o(.text._ZN6Sensor4initEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = Sensor::init() &rArr; _micros() &rArr; DWT_Get_Microsecond &rArr; DWT_Timer_Init &rArr; HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
+<BR>[Calls]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_delay(unsigned long)
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DWT_Delay_us
 </UL>
-<BR>[Called By]<UL><LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::init(I2C_HandleTypeDef*, I2C_HandleTypeDef*)
+<BR>[Called By]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::init(I2C_HandleTypeDef*, I2C_HandleTypeDef*)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> as5600_i2c.o(.rodata._ZTV10AS5600_I2C)
 </UL>
 <P><STRONG><a name="[49]"></a>Sensor::update()</STRONG> (Thumb, 88 bytes, Stack size 24 bytes, sensor.o(.text._ZN6Sensor6updateEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = Sensor::update() &rArr; _micros() &rArr; DWT_Get_Microsecond &rArr; DWT_Timer_Init &rArr; HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmplt
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<BR>[Calls]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
+<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmplt
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
+<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> as5600_i2c.o(.rodata._ZTV10AS5600_I2C)
 </UL>
 <P><STRONG><a name="[43]"></a>Sensor::getAngle()</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, sensor.o(.text._ZN6Sensor8getAngleEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Sensor::getAngle() &rArr; __aeabi_fadd
 </UL>
-<BR>[Calls]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<BR>[Calls]<UL><LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> as5600_i2c.o(.rodata._ZTV10AS5600_I2C)
 </UL>
 <P><STRONG><a name="[4a]"></a>Sensor::Outupdate()</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, sensor.o(.text._ZN6Sensor9OutupdateEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = Sensor::Outupdate() &rArr; _micros() &rArr; DWT_Get_Microsecond &rArr; DWT_Timer_Init &rArr; HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<BR>[Calls]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
+<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> as5600_i2c.o(.rodata._ZTV10AS5600_I2C)
 </UL>
-<P><STRONG><a name="[168]"></a>FOCMotor::linkSensor(Sensor*)</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, focmotor.o(.text._ZN8FOCMotor10linkSensorEP6Sensor))
-<BR><BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
+<P><STRONG><a name="[167]"></a>FOCMotor::linkSensor(Sensor*)</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, focmotor.o(.text._ZN8FOCMotor10linkSensorEP6Sensor))
+<BR><BR>[Called By]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
 </UL>
 
-<P><STRONG><a name="[156]"></a>FOCMotor::shaftAngle()</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, focmotor.o(.text._ZN8FOCMotor10shaftAngleEv))
+<P><STRONG><a name="[155]"></a>FOCMotor::shaftAngle()</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, focmotor.o(.text._ZN8FOCMotor10shaftAngleEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = FOCMotor::shaftAngle() &rArr; LowPassFilter::operator ()(float) &rArr; _micros() &rArr; DWT_Get_Microsecond &rArr; DWT_Timer_Init &rArr; HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<BR>[Calls]<UL><LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::initFOC()
 </UL>
 
-<P><STRONG><a name="[157]"></a>FOCMotor::shaftAngleOut()</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, focmotor.o(.text._ZN8FOCMotor13shaftAngleOutEv))
+<P><STRONG><a name="[156]"></a>FOCMotor::shaftAngleOut()</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, focmotor.o(.text._ZN8FOCMotor13shaftAngleOutEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = FOCMotor::shaftAngleOut() &rArr; LowPassFilter::operator ()(float) &rArr; _micros() &rArr; DWT_Get_Microsecond &rArr; DWT_Timer_Init &rArr; HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<BR>[Calls]<UL><LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::move(float)
 </UL>
 
-<P><STRONG><a name="[158]"></a>FOCMotor::electricalAngle()</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, focmotor.o(.text._ZN8FOCMotor15electricalAngleEv))
+<P><STRONG><a name="[157]"></a>FOCMotor::electricalAngle()</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, focmotor.o(.text._ZN8FOCMotor15electricalAngleEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = FOCMotor::electricalAngle() &rArr; _normalizeAngle(float) &rArr; fmodf &rArr; _frem &rArr; __fpl_fnaninf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_normalizeAngle(float)
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<BR>[Calls]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_normalizeAngle(float)
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::loopFOC()
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
+<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
 </UL>
 
-<P><STRONG><a name="[169]"></a>FOCMotor::linkCurrentSense(CurrentSense*)</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, focmotor.o(.text._ZN8FOCMotor16linkCurrentSenseEP12CurrentSense))
-<BR><BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
+<P><STRONG><a name="[168]"></a>FOCMotor::linkCurrentSense(CurrentSense*)</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, focmotor.o(.text._ZN8FOCMotor16linkCurrentSenseEP12CurrentSense))
+<BR><BR>[Called By]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
 </UL>
 
-<P><STRONG><a name="[159]"></a>FOCMotor::shaftVelocityOut()</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, focmotor.o(.text._ZN8FOCMotor16shaftVelocityOutEv))
+<P><STRONG><a name="[158]"></a>FOCMotor::shaftVelocityOut()</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, focmotor.o(.text._ZN8FOCMotor16shaftVelocityOutEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = FOCMotor::shaftVelocityOut() &rArr; LowPassFilter::operator ()(float) &rArr; _micros() &rArr; DWT_Get_Microsecond &rArr; DWT_Timer_Init &rArr; HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<BR>[Calls]<UL><LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::move(float)
 </UL>
 
-<P><STRONG><a name="[15a]"></a>FOCMotor::FOCMotor__sub_object()</STRONG> (Thumb, 292 bytes, Stack size 40 bytes, focmotor.o(.text._ZN8FOCMotorC2Ev))
+<P><STRONG><a name="[159]"></a>FOCMotor::FOCMotor__sub_object()</STRONG> (Thumb, 292 bytes, Stack size 40 bytes, focmotor.o(.text._ZN8FOCMotorC2Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = FOCMotor::FOCMotor__sub_object() &rArr; __aeabi_memclr4
 </UL>
-<BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::BLDCMotor(int, float, float, float)
+<BR>[Called By]<UL><LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::BLDCMotor(int, float, float, float)
 </UL>
 
 <P><STRONG><a name="[60]"></a>BLDCMotor::linkDriver(BLDCDriver*)</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, bldcmotor.o(.text._ZN9BLDCMotor10linkDriverEP10BLDCDriver))
-<BR><BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
+<BR><BR>[Called By]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> bldcmotor.o(.rodata._ZTV9BLDCMotor)
 </UL>
-<P><STRONG><a name="[15b]"></a>BLDCMotor::alignSensor()</STRONG> (Thumb, 732 bytes, Stack size 48 bytes, bldcmotor.o(.text._ZN9BLDCMotor11alignSensorEv))
+<P><STRONG><a name="[15a]"></a>BLDCMotor::alignSensor()</STRONG> (Thumb, 732 bytes, Stack size 48 bytes, bldcmotor.o(.text._ZN9BLDCMotor11alignSensorEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 360 + Unknown Stack Size
 <LI>Call Chain = BLDCMotor::alignSensor() &rArr; BLDCMotor::absoluteZeroSearch() &rArr; UART_Printf &rArr; vsnprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Printf
+<BR>[Calls]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Printf
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_delay(unsigned long)
-<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::electricalAngle()
-<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::absoluteZeroSearch()
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmplt
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
-<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpge
-<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
-<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::electricalAngle()
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::absoluteZeroSearch()
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmplt
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
+<LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpge
+<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::initFOC()
 </UL>
 
-<P><STRONG><a name="[15d]"></a>BLDCMotor::angleOpenloop(float)</STRONG> (Thumb, 336 bytes, Stack size 48 bytes, bldcmotor.o(.text._ZN9BLDCMotor13angleOpenloopEf))
+<P><STRONG><a name="[15c]"></a>BLDCMotor::angleOpenloop(float)</STRONG> (Thumb, 336 bytes, Stack size 48 bytes, bldcmotor.o(.text._ZN9BLDCMotor13angleOpenloopEf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = BLDCMotor::angleOpenloop(float) &rArr; _normalizeAngle(float) &rArr; fmodf &rArr; _frem &rArr; __fpl_fnaninf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_electricalAngle(float, int)
-<LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_normalizeAngle(float)
-<LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmplt
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
-<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
+<BR>[Calls]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_electricalAngle(float, int)
+<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_normalizeAngle(float)
+<LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmplt
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
+<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
+<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::move(float)
-<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::absoluteZeroSearch()
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::absoluteZeroSearch()
 </UL>
 
 <P><STRONG><a name="[5f]"></a>BLDCMotor::setPhaseVoltage(float, float, float)</STRONG> (Thumb, 1000 bytes, Stack size 56 bytes, bldcmotor.o(.text._ZN9BLDCMotor15setPhaseVoltageEfff))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = BLDCMotor::setPhaseVoltage(float, float, float) &rArr; _sincos(float, float*, float*) &rArr; _cos(float) &rArr; _sin(float) &rArr; __aeabi_dmul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sincos(float, float*, float*)
-<LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_normalizeAngle(float)
-<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2iz
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
-<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fminf
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fmaxf
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<BR>[Calls]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sincos(float, float*, float*)
+<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_normalizeAngle(float)
+<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2iz
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fminf
+<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fmaxf
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> bldcmotor.o(.rodata._ZTV9BLDCMotor)
 </UL>
-<P><STRONG><a name="[161]"></a>BLDCMotor::velocityOpenloop(float)</STRONG> (Thumb, 236 bytes, Stack size 40 bytes, bldcmotor.o(.text._ZN9BLDCMotor16velocityOpenloopEf))
+<P><STRONG><a name="[160]"></a>BLDCMotor::velocityOpenloop(float)</STRONG> (Thumb, 236 bytes, Stack size 40 bytes, bldcmotor.o(.text._ZN9BLDCMotor16velocityOpenloopEf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = BLDCMotor::velocityOpenloop(float) &rArr; _normalizeAngle(float) &rArr; fmodf &rArr; _frem &rArr; __fpl_fnaninf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_electricalAngle(float, int)
-<LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_normalizeAngle(float)
-<LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmplt
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
-<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
+<BR>[Calls]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_electricalAngle(float, int)
+<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_normalizeAngle(float)
+<LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_micros()
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmplt
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
+<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
+<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::move(float)
 </UL>
 
-<P><STRONG><a name="[162]"></a>BLDCMotor::alignCurrentSense()</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, bldcmotor.o(.text._ZN9BLDCMotor17alignCurrentSenseEv))
+<P><STRONG><a name="[161]"></a>BLDCMotor::alignCurrentSense()</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, bldcmotor.o(.text._ZN9BLDCMotor17alignCurrentSenseEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 296 + Unknown Stack Size
 <LI>Call Chain = BLDCMotor::alignCurrentSense() &rArr; UART_Printf &rArr; vsnprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Printf
+<BR>[Calls]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::initFOC()
 </UL>
 
-<P><STRONG><a name="[15c]"></a>BLDCMotor::absoluteZeroSearch()</STRONG> (Thumb, 228 bytes, Stack size 32 bytes, bldcmotor.o(.text._ZN9BLDCMotor18absoluteZeroSearchEv))
+<P><STRONG><a name="[15b]"></a>BLDCMotor::absoluteZeroSearch()</STRONG> (Thumb, 228 bytes, Stack size 32 bytes, bldcmotor.o(.text._ZN9BLDCMotor18absoluteZeroSearchEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 312 + Unknown Stack Size
 <LI>Call Chain = BLDCMotor::absoluteZeroSearch() &rArr; UART_Printf &rArr; vsnprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Printf
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
-<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpge
+<BR>[Calls]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Printf
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
+<LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpge
 </UL>
-<BR>[Called By]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
+<BR>[Called By]<UL><LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
 </UL>
 
 <P><STRONG><a name="[59]"></a>BLDCMotor::init()</STRONG> (Thumb, 296 bytes, Stack size 24 bytes, bldcmotor.o(.text._ZN9BLDCMotor4initEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 304 + Unknown Stack Size
 <LI>Call Chain = BLDCMotor::init() &rArr; UART_Printf &rArr; vsnprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Printf
+<BR>[Calls]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Printf
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_delay(unsigned long)
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
-<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
+<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
+<BR>[Called By]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> bldcmotor.o(.rodata._ZTV9BLDCMotor)
 </UL>
 <P><STRONG><a name="[5e]"></a>BLDCMotor::move(float)</STRONG> (Thumb, 728 bytes, Stack size 40 bytes, bldcmotor.o(.text._ZN9BLDCMotor4moveEf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = BLDCMotor::move(float) &rArr; BLDCMotor::angleOpenloop(float) &rArr; _normalizeAngle(float) &rArr; fmodf &rArr; _frem &rArr; __fpl_fnaninf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
-<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftVelocityOut()
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngleOut()
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmplt
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
-<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<BR>[Calls]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
+<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftVelocityOut()
+<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngleOut()
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmplt
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
+<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpgt
+<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 </UL>
-<BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
-<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
+<BR>[Called By]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> bldcmotor.o(.rodata._ZTV9BLDCMotor)
 </UL>
@@ -2500,13 +2493,13 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 376 + Unknown Stack Size
 <LI>Call Chain = BLDCMotor::initFOC() &rArr; BLDCMotor::alignSensor() &rArr; BLDCMotor::absoluteZeroSearch() &rArr; UART_Printf &rArr; vsnprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Printf
+<BR>[Calls]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Printf
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_delay(unsigned long)
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngle()
-<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignCurrentSense()
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
+<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngle()
+<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignCurrentSense()
+<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
 </UL>
-<BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
+<BR>[Called By]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> bldcmotor.o(.rodata._ZTV9BLDCMotor)
 </UL>
@@ -2514,29 +2507,28 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 320 + Unknown Stack Size
 <LI>Call Chain = BLDCMotor::loopFOC() &rArr; UART_Printf &rArr; vsnprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Printf
-<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
-<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
-<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getFOCCurrents(float)
-<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::electricalAngle()
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmplt
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
-<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<BR>[Calls]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Printf
+<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
+<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
+<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getFOCCurrents(float)
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::electricalAngle()
+<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmplt
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmple
+<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 </UL>
-<BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
-<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
+<BR>[Called By]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> bldcmotor.o(.rodata._ZTV9BLDCMotor)
 </UL>
-<P><STRONG><a name="[130]"></a>BLDCMotor::BLDCMotor(int, float, float, float)</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, bldcmotor.o(.text._ZN9BLDCMotorC2Eifff))
+<P><STRONG><a name="[12f]"></a>BLDCMotor::BLDCMotor(int, float, float, float)</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, bldcmotor.o(.text._ZN9BLDCMotorC2Eifff))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = BLDCMotor::BLDCMotor(int, float, float, float) &rArr; FOCMotor::FOCMotor__sub_object() &rArr; __aeabi_memclr4
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::FOCMotor__sub_object()
-<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<BR>[Calls]<UL><LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::FOCMotor__sub_object()
+<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fcmpeq
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
 </UL>
 <BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GLOBAL__sub_I_user_main.cpp
 </UL>
@@ -2547,31 +2539,31 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 48 + Unknown Stack Size
 <LI>Call Chain = __cxa_pure_virtual &rArr; abort_message &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
 </UL>
-<BR>[Calls]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort_message
+<BR>[Calls]<UL><LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort_message
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> focmotor.o(.rodata._ZTV8FOCMotor)
 </UL>
-<P><STRONG><a name="[154]"></a>_readADCVoltageInline</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, adc.o(.text._readADCVoltageInline))
+<P><STRONG><a name="[153]"></a>_readADCVoltageInline</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, adc.o(.text._readADCVoltageInline))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = _readADCVoltageInline &rArr; __aeabi_fmul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
+<BR>[Calls]<UL><LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
 </UL>
 <BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::getPhaseCurrents()
-<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::calibrateOffsets()
+<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::calibrateOffsets()
 </UL>
 
-<P><STRONG><a name="[150]"></a>_writeDutyCycle3PWM</STRONG> (Thumb, 70 bytes, Stack size 24 bytes, bsp_pwm.o(.text._writeDutyCycle3PWM))
+<P><STRONG><a name="[14f]"></a>_writeDutyCycle3PWM</STRONG> (Thumb, 70 bytes, Stack size 24 bytes, bsp_pwm.o(.text._writeDutyCycle3PWM))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = _writeDutyCycle3PWM &rArr; __aeabi_f2uiz
 </UL>
-<BR>[Calls]<UL><LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2uiz
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
+<BR>[Calls]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2uiz
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
 </UL>
 <BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCDriver3PWM::setPwm(float, float, float)
 </UL>
 
-<P><STRONG><a name="[163]"></a>abort_message</STRONG> (Thumb, 6 bytes, Stack size unknown bytes, abort_message.cpp.o(.text.abort_message))
+<P><STRONG><a name="[162]"></a>abort_message</STRONG> (Thumb, 6 bytes, Stack size unknown bytes, abort_message.cpp.o(.text.abort_message))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48 + Unknown Stack Size
 <LI>Call Chain = abort_message &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
 </UL>
@@ -2581,41 +2573,38 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[94]"></a>main</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, main.o(.text.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 416 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 408 + Unknown Stack Size
 <LI>Call Chain = main &rArr; main_Cpp &rArr; BLDCDriver3PWM::init() &rArr; SEGGER_Printf_Float &rArr; SEGGER_RTT_printf &rArr; SEGGER_RTT_vprintf &rArr; _PrintUnsigned &rArr; _StoreChar &rArr; SEGGER_RTT_Write &rArr; SEGGER_RTT_WriteNoLock &rArr; _WriteBlocking
 </UL>
-<BR>[Calls]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
-<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
-<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM4_Init
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_I2C2_Init
-<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_I2C1_Init
-<LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
-<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
+<BR>[Calls]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
+<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM4_Init
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
+<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_I2C2_Init
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_I2C1_Init
+<LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[166]"></a>main_Cpp</STRONG> (Thumb, 296 bytes, Stack size 32 bytes, user_main.o(.text.main_Cpp))
-<BR><BR>[Stack]<UL><LI>Max Depth = 416 + Unknown Stack Size
+<P><STRONG><a name="[165]"></a>main_Cpp</STRONG> (Thumb, 252 bytes, Stack size 24 bytes, user_main.o(.text.main_Cpp))
+<BR><BR>[Stack]<UL><LI>Max Depth = 408 + Unknown Stack Size
 <LI>Call Chain = main_Cpp &rArr; BLDCDriver3PWM::init() &rArr; SEGGER_Printf_Float &rArr; SEGGER_RTT_printf &rArr; SEGGER_RTT_vprintf &rArr; _PrintUnsigned &rArr; _StoreChar &rArr; SEGGER_RTT_Write &rArr; SEGGER_RTT_WriteNoLock &rArr; _WriteBlocking
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive
-<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::linkDriver(BLDCDriver*)
-<LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::linkCurrentSense(CurrentSense*)
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::linkSensor(Sensor*)
+<LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Start_IT
+<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::linkDriver(BLDCDriver*)
+<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::linkCurrentSense(CurrentSense*)
+<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::linkSensor(Sensor*)
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCDriver3PWM::init()
-<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::init(I2C_HandleTypeDef*, I2C_HandleTypeDef*)
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::loopFOC()
+<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::init(I2C_HandleTypeDef*, I2C_HandleTypeDef*)
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::initFOC()
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::move(float)
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::init()
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::linkDriver(BLDCDriver*)
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::init()
-<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
 </UL>
 <BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -2683,16 +2672,16 @@ Global Symbols
 <P><STRONG><a name="[16f]"></a>__mathlib_flt_invalid</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, funder.o(i.__mathlib_flt_invalid))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __mathlib_flt_invalid &rArr; __aeabi_fdiv
 </UL>
-<BR>[Calls]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<BR>[Calls]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
 </UL>
-<BR>[Called By]<UL><LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fmodf
+<BR>[Called By]<UL><LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fmodf
 </UL>
 
 <P><STRONG><a name="[a3]"></a>_is_digit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, __printf_wp.o(i._is_digit))
 <BR><BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
 </UL>
 
-<P><STRONG><a name="[160]"></a>fmaxf</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, fmaxf.o(i.fmaxf))
+<P><STRONG><a name="[15f]"></a>fmaxf</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, fmaxf.o(i.fmaxf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = fmaxf &rArr; __ARM_fcmp4
 </UL>
 <BR>[Calls]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fcmp4
@@ -2700,7 +2689,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::setPhaseVoltage(float, float, float)
 </UL>
 
-<P><STRONG><a name="[15f]"></a>fminf</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, fminf.o(i.fminf))
+<P><STRONG><a name="[15e]"></a>fminf</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, fminf.o(i.fminf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = fminf &rArr; __ARM_fcmp4
 </UL>
 <BR>[Calls]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fcmp4
@@ -2708,7 +2697,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::setPhaseVoltage(float, float, float)
 </UL>
 
-<P><STRONG><a name="[136]"></a>fmodf</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, fmodf.o(i.fmodf))
+<P><STRONG><a name="[135]"></a>fmodf</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, fmodf.o(i.fmodf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = fmodf &rArr; _frem &rArr; __fpl_fnaninf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_frsub
@@ -2716,7 +2705,7 @@ Global Symbols
 <LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_frem
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
 </UL>
-<BR>[Called By]<UL><LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_normalizeAngle(float)
+<BR>[Called By]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_normalizeAngle(float)
 </UL>
 
 <P><STRONG><a name="[8c]"></a>_get_lc_numeric</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, lc_numeric_c.o(locale$$code))
@@ -2736,7 +2725,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rt_ctype_table.o(.text)
 </UL>
-<P><STRONG><a name="[152]"></a>__aeabi_d2f</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, d2f.o(x$fpl$d2f))
+<P><STRONG><a name="[151]"></a>__aeabi_d2f</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, d2f.o(x$fpl$d2f))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_d2f
 </UL>
 <BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getVelocityOut()
@@ -2749,7 +2738,7 @@ Global Symbols
 <LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dnaninf
 </UL>
 
-<P><STRONG><a name="[151]"></a>__aeabi_dadd</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, daddsub_clz.o(x$fpl$dadd))
+<P><STRONG><a name="[150]"></a>__aeabi_dadd</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, daddsub_clz.o(x$fpl$dadd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_dadd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getPreciseAngle()
@@ -2762,17 +2751,17 @@ Global Symbols
 <LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dnaninf
 </UL>
 
-<P><STRONG><a name="[13f]"></a>__aeabi_d2uiz</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, dfixu.o(x$fpl$dfixu))
+<P><STRONG><a name="[13e]"></a>__aeabi_d2uiz</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, dfixu.o(x$fpl$dfixu))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_d2uiz
 </UL>
-<BR>[Called By]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sin(float)
+<BR>[Called By]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sin(float)
 </UL>
 
 <P><STRONG><a name="[17a]"></a>_dfixu</STRONG> (Thumb, 90 bytes, Stack size 32 bytes, dfixu.o(x$fpl$dfixu), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dnaninf
 </UL>
 
-<P><STRONG><a name="[155]"></a>__aeabi_i2d</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, dflt_clz.o(x$fpl$dflt))
+<P><STRONG><a name="[154]"></a>__aeabi_i2d</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, dflt_clz.o(x$fpl$dflt))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getPreciseAngle()
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getVelocityOut()
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getVelocity()
@@ -2780,10 +2769,10 @@ Global Symbols
 
 <P><STRONG><a name="[1d2]"></a>_dflt</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, dflt_clz.o(x$fpl$dflt), UNUSED)
 
-<P><STRONG><a name="[13e]"></a>__aeabi_dmul</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, dmul.o(x$fpl$dmul))
+<P><STRONG><a name="[13d]"></a>__aeabi_dmul</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, dmul.o(x$fpl$dmul))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_dmul
 </UL>
-<BR>[Called By]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sin(float)
+<BR>[Called By]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sin(float)
 <LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getPreciseAngle()
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getVelocityOut()
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getVelocity()
@@ -2816,13 +2805,13 @@ Global Symbols
 <LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dnaninf
 </UL>
 
-<P><STRONG><a name="[11d]"></a>__aeabi_f2d</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, f2d.o(x$fpl$f2d))
+<P><STRONG><a name="[11c]"></a>__aeabi_f2d</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, f2d.o(x$fpl$f2d))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_f2d
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_Printf_Float
-<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sin(float)
+<BR>[Called By]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_Printf_Float
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sin(float)
 <LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getPreciseAngle()
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
+<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::driverAlign(float)
 </UL>
 
@@ -2831,25 +2820,25 @@ Global Symbols
 <LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dretinf
 </UL>
 
-<P><STRONG><a name="[138]"></a>__aeabi_fadd</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, faddsub_clz.o(x$fpl$fadd))
+<P><STRONG><a name="[137]"></a>__aeabi_fadd</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, faddsub_clz.o(x$fpl$fadd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_fadd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cos(float)
-<LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_normalizeAngle(float)
-<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
-<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
-<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getFOCCurrents(float)
+<BR>[Called By]<UL><LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cos(float)
+<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_normalizeAngle(float)
+<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
+<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
+<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getFOCCurrents(float)
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getDCCurrent(float)
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getAngle()
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getVelocityOut()
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getVelocity()
 <LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getOutAngle()
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::move(float)
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::setPhaseVoltage(float, float, float)
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
-<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::calibrateOffsets()
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
+<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
+<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::calibrateOffsets()
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::driverAlign(float)
 </UL>
 
@@ -2859,19 +2848,19 @@ Global Symbols
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fnaninf
 </UL>
 
-<P><STRONG><a name="[148]"></a>__aeabi_fcmpeq</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, fcmp.o(x$fpl$fcmp))
+<P><STRONG><a name="[147]"></a>__aeabi_fcmpeq</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, fcmp.o(x$fpl$fcmp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_fcmpeq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getFOCCurrents(float)
+<BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getFOCCurrents(float)
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getDCCurrent(float)
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCDriver3PWM::init()
-<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::BLDCMotor(int, float, float, float)
+<LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::BLDCMotor(int, float, float, float)
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::loopFOC()
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::move(float)
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::init()
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
+<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::driverAlign(float)
 </UL>
 
@@ -2883,19 +2872,19 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fcmpeq
 </UL>
 
-<P><STRONG><a name="[13c]"></a>__aeabi_fcmpgt</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, fcmp.o(x$fpl$fcmp))
+<P><STRONG><a name="[13b]"></a>__aeabi_fcmpgt</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, fcmp.o(x$fpl$fcmp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_fcmpgt
 </UL>
-<BR>[Called By]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cos(float)
-<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
+<BR>[Called By]<UL><LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cos(float)
+<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getDCCurrent(float)
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::Outupdate()
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::update()
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getVelocityOut()
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCDriver3PWM::setPwm(float, float, float)
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::move(float)
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::driverAlign(float)
 </UL>
 
@@ -2903,14 +2892,14 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fcmpge
 </UL>
 
-<P><STRONG><a name="[137]"></a>__aeabi_fcmpge</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, fcmp.o(x$fpl$fcmp))
+<P><STRONG><a name="[136]"></a>__aeabi_fcmpge</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, fcmp.o(x$fpl$fcmp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_fcmpge
 </UL>
-<BR>[Called By]<UL><LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_normalizeAngle(float)
-<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
+<BR>[Called By]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_normalizeAngle(float)
+<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getVelocity()
-<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::absoluteZeroSearch()
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::absoluteZeroSearch()
+<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::driverAlign(float)
 </UL>
 
@@ -2918,11 +2907,11 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fcmpge
 </UL>
 
-<P><STRONG><a name="[14d]"></a>__aeabi_fcmple</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, fcmp.o(x$fpl$fcmp))
+<P><STRONG><a name="[14c]"></a>__aeabi_fcmple</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, fcmp.o(x$fpl$fcmp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_fcmple
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
-<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
+<BR>[Called By]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
+<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::Outupdate()
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::update()
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getVelocity()
@@ -2930,9 +2919,9 @@ Global Symbols
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::loopFOC()
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::move(float)
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::init()
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
+<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::driverAlign(float)
 </UL>
 
@@ -2940,17 +2929,17 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fcmple
 </UL>
 
-<P><STRONG><a name="[14f]"></a>__aeabi_fcmplt</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, fcmp.o(x$fpl$fcmp))
+<P><STRONG><a name="[14e]"></a>__aeabi_fcmplt</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, fcmp.o(x$fpl$fcmp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_fcmplt
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
+<BR>[Called By]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::update()
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCDriver3PWM::setPwm(float, float, float)
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::loopFOC()
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::move(float)
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
+<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::driverAlign(float)
 </UL>
 
@@ -2965,8 +2954,8 @@ Global Symbols
 <P><STRONG><a name="[170]"></a>__ARM_fcmp4</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, fcmp4.o(x$fpl$fcmp4))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __ARM_fcmp4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fminf
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fmaxf
+<BR>[Called By]<UL><LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fminf
+<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fmaxf
 </UL>
 
 <P><STRONG><a name="[18b]"></a>_fcmp4</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, fcmp4.o(x$fpl$fcmp4), UNUSED)
@@ -2982,23 +2971,23 @@ Global Symbols
 <LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fcmp4
 </UL>
 
-<P><STRONG><a name="[146]"></a>__aeabi_fdiv</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, fdiv.o(x$fpl$fdiv))
+<P><STRONG><a name="[145]"></a>__aeabi_fdiv</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, fdiv.o(x$fpl$fdiv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_fdiv
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
-<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
+<BR>[Called By]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
+<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getVelocityOut()
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getVelocity()
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCDriver3PWM::setPwm(float, float, float)
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::getOutSensorAngle()
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::getSensorAngle()
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::move(float)
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::setPhaseVoltage(float, float, float)
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
-<LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::InlineCurrentSense(float, float, int, int, int)
-<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::calibrateOffsets()
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
+<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
+<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::InlineCurrentSense(float, float, int, int, int)
+<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::calibrateOffsets()
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::driverAlign(float)
 <LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_flt_invalid
 </UL>
@@ -3018,7 +3007,7 @@ Global Symbols
 <LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_feq
 </UL>
 
-<P><STRONG><a name="[15e]"></a>__aeabi_f2iz</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, ffix.o(x$fpl$ffix))
+<P><STRONG><a name="[15d]"></a>__aeabi_f2iz</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, ffix.o(x$fpl$ffix))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_f2iz
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::setPhaseVoltage(float, float, float)
@@ -3028,46 +3017,45 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fnaninf
 </UL>
 
-<P><STRONG><a name="[164]"></a>__aeabi_f2uiz</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, ffixu.o(x$fpl$ffixu))
+<P><STRONG><a name="[163]"></a>__aeabi_f2uiz</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, ffixu.o(x$fpl$ffixu))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_f2uiz
 </UL>
-<BR>[Called By]<UL><LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_writeDutyCycle3PWM
+<BR>[Called By]<UL><LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_writeDutyCycle3PWM
 </UL>
 
 <P><STRONG><a name="[190]"></a>_ffixu</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, ffixu.o(x$fpl$ffixu), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fnaninf
 </UL>
 
-<P><STRONG><a name="[13a]"></a>__aeabi_i2f</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, fflt_clz.o(x$fpl$fflt))
-<BR><BR>[Called By]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sin(float)
-<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_electricalAngle(float, int)
+<P><STRONG><a name="[139]"></a>__aeabi_i2f</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, fflt_clz.o(x$fpl$fflt))
+<BR><BR>[Called By]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sin(float)
+<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_electricalAngle(float, int)
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getAngle()
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getVelocityOut()
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getVelocity()
 <LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getOutAngle()
-<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftVelocityOut()
-<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::electricalAngle()
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngleOut()
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngle()
-<LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::AS5600_I2C(AS5600_I2CConfig_s)
+<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftVelocityOut()
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::electricalAngle()
+<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngleOut()
+<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngle()
+<LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::AS5600_I2C(AS5600_I2CConfig_s)
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::getOutSensorAngle()
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::getSensorAngle()
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::loopFOC()
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::move(float)
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::setPhaseVoltage(float, float, float)
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
+<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
 </UL>
 
 <P><STRONG><a name="[1d5]"></a>_fflt</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, fflt_clz.o(x$fpl$fflt), UNUSED)
 
-<P><STRONG><a name="[14c]"></a>__aeabi_ui2f</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, fflt_clz.o(x$fpl$ffltu))
-<BR><BR>[Called By]<UL><LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_readADCVoltageInline
-<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_Cpp
-<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
-<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
-<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_writeDutyCycle3PWM
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
+<P><STRONG><a name="[14b]"></a>__aeabi_ui2f</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, fflt_clz.o(x$fpl$ffltu))
+<BR><BR>[Called By]<UL><LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_readADCVoltageInline
+<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
+<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
+<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_writeDutyCycle3PWM
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
 </UL>
 
 <P><STRONG><a name="[1d6]"></a>_ffltu</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, fflt_clz.o(x$fpl$ffltu), UNUSED)
@@ -3092,35 +3080,35 @@ Global Symbols
 
 <P><STRONG><a name="[1d8]"></a>__fpl_fcmple_InfNaN</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fleqf.o(x$fpl$fleqf), UNUSED)
 
-<P><STRONG><a name="[134]"></a>__aeabi_fmul</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, fmul.o(x$fpl$fmul))
+<P><STRONG><a name="[133]"></a>__aeabi_fmul</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, fmul.o(x$fpl$fmul))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_fmul
 </UL>
-<BR>[Called By]<UL><LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_readADCVoltageInline
-<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sin(float)
-<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_electricalAngle(float, int)
-<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sqrtApprox(float)
-<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
-<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
-<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getFOCCurrents(float)
+<BR>[Called By]<UL><LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_readADCVoltageInline
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sin(float)
+<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_electricalAngle(float, int)
+<LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sqrtApprox(float)
+<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
+<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
+<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getFOCCurrents(float)
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getDCCurrent(float)
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getAngle()
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getVelocityOut()
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getVelocity()
 <LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getOutAngle()
-<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftVelocityOut()
-<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::electricalAngle()
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngleOut()
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngle()
-<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_writeDutyCycle3PWM
+<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftVelocityOut()
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::electricalAngle()
+<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngleOut()
+<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngle()
+<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_writeDutyCycle3PWM
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::getOutSensorAngle()
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::getSensorAngle()
-<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::BLDCMotor(int, float, float, float)
+<LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::BLDCMotor(int, float, float, float)
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::loopFOC()
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::move(float)
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::setPhaseVoltage(float, float, float)
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
+<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::getPhaseCurrents()
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::driverAlign(float)
 </UL>
@@ -3152,7 +3140,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fnaninf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fmodf
+<BR>[Called By]<UL><LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fmodf
 </UL>
 
 <P><STRONG><a name="[175]"></a>__fpl_fretinf</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, fretinf.o(x$fpl$fretinf), UNUSED)
@@ -3163,7 +3151,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[172]"></a>__aeabi_frsub</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, faddsub_clz.o(x$fpl$frsb))
-<BR><BR>[Called By]<UL><LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fmodf
+<BR><BR>[Called By]<UL><LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fmodf
 </UL>
 
 <P><STRONG><a name="[192]"></a>_frsb</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, faddsub_clz.o(x$fpl$frsb), UNUSED)
@@ -3171,27 +3159,27 @@ Global Symbols
 <LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fadd1
 </UL>
 
-<P><STRONG><a name="[149]"></a>__aeabi_fsub</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, faddsub_clz.o(x$fpl$fsub))
+<P><STRONG><a name="[148]"></a>__aeabi_fsub</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, faddsub_clz.o(x$fpl$fsub))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_fsub
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
-<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
-<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getFOCCurrents(float)
+<BR>[Called By]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIDController::operator ()(float)
+<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter::operator ()(float)
+<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getFOCCurrents(float)
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentSense::getDCCurrent(float)
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::Outupdate()
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::update()
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getVelocityOut()
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sensor::getVelocity()
-<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::electricalAngle()
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngleOut()
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngle()
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::electricalAngle()
+<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngleOut()
+<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FOCMotor::shaftAngle()
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::loopFOC()
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::move(float)
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::velocityOpenloop(float)
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::setPhaseVoltage(float, float, float)
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
-<LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::InlineCurrentSense(float, float, int, int, int)
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::angleOpenloop(float)
+<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::alignSensor()
+<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::InlineCurrentSense(float, float, int, int, int)
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::getPhaseCurrents()
 </UL>
 
@@ -3227,15 +3215,15 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
 </UL>
 
-<P><STRONG><a name="[111]"></a>I2C_IsAcknowledgeFailed</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, stm32f1xx_hal_i2c.o(.text.I2C_IsAcknowledgeFailed))
-<BR><BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnTXEFlagUntilTimeout
+<P><STRONG><a name="[110]"></a>I2C_IsAcknowledgeFailed</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, stm32f1xx_hal_i2c.o(.text.I2C_IsAcknowledgeFailed))
+<BR><BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnTXEFlagUntilTimeout
 </UL>
 
 <P><STRONG><a name="[dc]"></a>I2C_RequestMemoryRead</STRONG> (Thumb, 260 bytes, Stack size 40 bytes, stm32f1xx_hal_i2c.o(.text.I2C_RequestMemoryRead))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = I2C_RequestMemoryRead &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnTXEFlagUntilTimeout
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnMasterAddressFlagUntilTimeout
+<BR>[Calls]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnTXEFlagUntilTimeout
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnMasterAddressFlagUntilTimeout
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Read
@@ -3250,7 +3238,7 @@ Local Symbols
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_RequestMemoryRead
 </UL>
 
-<P><STRONG><a name="[10f]"></a>I2C_WaitOnMasterAddressFlagUntilTimeout</STRONG> (Thumb, 180 bytes, Stack size 32 bytes, stm32f1xx_hal_i2c.o(.text.I2C_WaitOnMasterAddressFlagUntilTimeout))
+<P><STRONG><a name="[10e]"></a>I2C_WaitOnMasterAddressFlagUntilTimeout</STRONG> (Thumb, 180 bytes, Stack size 32 bytes, stm32f1xx_hal_i2c.o(.text.I2C_WaitOnMasterAddressFlagUntilTimeout))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
@@ -3266,11 +3254,11 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Read
 </UL>
 
-<P><STRONG><a name="[110]"></a>I2C_WaitOnTXEFlagUntilTimeout</STRONG> (Thumb, 86 bytes, Stack size 24 bytes, stm32f1xx_hal_i2c.o(.text.I2C_WaitOnTXEFlagUntilTimeout))
+<P><STRONG><a name="[10f]"></a>I2C_WaitOnTXEFlagUntilTimeout</STRONG> (Thumb, 86 bytes, Stack size 24 bytes, stm32f1xx_hal_i2c.o(.text.I2C_WaitOnTXEFlagUntilTimeout))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = I2C_WaitOnTXEFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_IsAcknowledgeFailed
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Called By]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_RequestMemoryRead
 </UL>
@@ -3317,7 +3305,7 @@ Local Symbols
 <P><STRONG><a name="[102]"></a>UART_Receive_IT</STRONG> (Thumb, 194 bytes, Stack size 4 bytes, stm32f1xx_hal_uart.o(.text.UART_Receive_IT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = UART_Receive_IT
 </UL>
-<BR>[Calls]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
+<BR>[Calls]<UL><LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 <LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UARTEx_RxEventCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IRQHandler
@@ -3338,62 +3326,61 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndRxTransfer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive
+<BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 </UL>
 
-<P><STRONG><a name="[127]"></a>_PrintUnsigned</STRONG> (Thumb, 228 bytes, Stack size 40 bytes, segger_rtt_printf.o(.text._PrintUnsigned))
+<P><STRONG><a name="[126]"></a>_PrintUnsigned</STRONG> (Thumb, 228 bytes, Stack size 40 bytes, segger_rtt_printf.o(.text._PrintUnsigned))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = _PrintUnsigned &rArr; _StoreChar &rArr; SEGGER_RTT_Write &rArr; SEGGER_RTT_WriteNoLock &rArr; _WriteBlocking
 </UL>
-<BR>[Calls]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_StoreChar
+<BR>[Calls]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_StoreChar
 </UL>
-<BR>[Called By]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_vprintf
+<BR>[Called By]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_vprintf
 </UL>
 
-<P><STRONG><a name="[126]"></a>_StoreChar</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, segger_rtt_printf.o(.text._StoreChar))
+<P><STRONG><a name="[125]"></a>_StoreChar</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, segger_rtt_printf.o(.text._StoreChar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = _StoreChar &rArr; SEGGER_RTT_Write &rArr; SEGGER_RTT_WriteNoLock &rArr; _WriteBlocking
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_Write
+<BR>[Calls]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_Write
 </UL>
-<BR>[Called By]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_vprintf
-<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_PrintUnsigned
+<BR>[Called By]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_vprintf
+<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_PrintUnsigned
 </UL>
 
-<P><STRONG><a name="[120]"></a>_DoInit</STRONG> (Thumb, 112 bytes, Stack size 8 bytes, segger_rtt.o(.text._DoInit))
+<P><STRONG><a name="[11f]"></a>_DoInit</STRONG> (Thumb, 112 bytes, Stack size 8 bytes, segger_rtt.o(.text._DoInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = _DoInit &rArr; __aeabi_memclr4
 </UL>
-<BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_Write
-</UL>
-
-<P><STRONG><a name="[122]"></a>_GetAvailWriteSpace</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, segger_rtt.o(.text._GetAvailWriteSpace))
-<BR><BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_WriteNoLock
+<BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_Write
 </UL>
 
-<P><STRONG><a name="[123]"></a>_WriteBlocking</STRONG> (Thumb, 94 bytes, Stack size 32 bytes, segger_rtt.o(.text._WriteBlocking))
+<P><STRONG><a name="[121]"></a>_GetAvailWriteSpace</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, segger_rtt.o(.text._GetAvailWriteSpace))
+<BR><BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_WriteNoLock
+</UL>
+
+<P><STRONG><a name="[122]"></a>_WriteBlocking</STRONG> (Thumb, 94 bytes, Stack size 32 bytes, segger_rtt.o(.text._WriteBlocking))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = _WriteBlocking
 </UL>
-<BR>[Calls]<UL><LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<BR>[Calls]<UL><LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_WriteNoLock
+<BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_WriteNoLock
 </UL>
 
-<P><STRONG><a name="[124]"></a>_WriteNoCheck</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, segger_rtt.o(.text._WriteNoCheck))
+<P><STRONG><a name="[123]"></a>_WriteNoCheck</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, segger_rtt.o(.text._WriteNoCheck))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = _WriteNoCheck
 </UL>
-<BR>[Calls]<UL><LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<BR>[Calls]<UL><LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_WriteNoLock
+<BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_WriteNoLock
 </UL>
 
-<P><STRONG><a name="[61]"></a>_GLOBAL__sub_I_user_main.cpp</STRONG> (Thumb, 112 bytes, Stack size 32 bytes, user_main.o(.text._GLOBAL__sub_I_user_main.cpp))
+<P><STRONG><a name="[61]"></a>_GLOBAL__sub_I_user_main.cpp</STRONG> (Thumb, 108 bytes, Stack size 32 bytes, user_main.o(.text._GLOBAL__sub_I_user_main.cpp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = _GLOBAL__sub_I_user_main.cpp &rArr; BLDCMotor::BLDCMotor(int, float, float, float) &rArr; FOCMotor::FOCMotor__sub_object() &rArr; __aeabi_memclr4
 </UL>
-<BR>[Calls]<UL><LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCDriver3PWM::BLDCDriver3PWM(int, int, int, int, int, int)
-<LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::AS5600_I2C(AS5600_I2CConfig_s)
-<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::BLDCMotor(int, float, float, float)
-<LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::InlineCurrentSense(float, float, int, int, int)
+<BR>[Calls]<UL><LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCDriver3PWM::BLDCDriver3PWM(int, int, int, int, int, int)
+<LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AS5600_I2C::AS5600_I2C(AS5600_I2CConfig_s)
+<LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLDCMotor::BLDCMotor(int, float, float, float)
+<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InlineCurrentSense::InlineCurrentSense(float, float, int, int, int)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> user_main.o(.init_array)
 </UL>
